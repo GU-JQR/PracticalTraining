@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 引入外部样式链接 -->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4622342_ttjcs7urdfh.css">
 </head>
 
 <body>
@@ -30,6 +32,32 @@
     <!-- 引入矢量图 -->
     <img src="img/home gray 64.png" alt="">
     <img src="img/home red 64.png" alt="">
+
+    <!-- 字体图标 引入方式1 在线链接
+        1.生成在线链接 复制链接路径 https://at.alicdn.com/t/c/font_4622342_ttjcs7urdfh.css
+        2.引入到当前页面中
+        3.可以使用任意的标签 例如<i></i> <span></span>
+        4.给标签加上class（通用样式和自己的样式）例如：class="iconfont icon-gouwuche"
+        5.注意在线联网，并且阿里巴巴矢量服务器不能出问题
+    字体图标的好处：
+            可以把图标当做文字一样进行样式修改
+            font-size 字体大小
+            font-weight 字体族系
+            color 文本颜色
+    -->
+    <i class="iconfont icon-gouwuche shop-car"></i>
+    <i class="iconfont icon-home"></i>
+    <hr>
+
+
 </body>
+<style>
+    /* 设置购物车图标颜色 大小 */
+    .shop-car {
+        color: greenyellow;
+        font-size: 40px;
+        font-weight: bold;
+    }
+</style>
 
 </html>

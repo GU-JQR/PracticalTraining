@@ -1,0 +1,30 @@
+{
+  "id": "4622342",
+  "name": "squ_21",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1370",
+      "name": "放大",
+      "font_class": "fangda",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "160001",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "6308120",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    }
+  ]
+}

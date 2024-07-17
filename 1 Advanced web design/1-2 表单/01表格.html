@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- table表示是一个表格
+        thead:表格头部 标题
+        tr：行
+        td：单元格 th：加粗单元格，作为表格标题
+        tbody：表格主体内容
+            属性：
+                cellspacing 单元格之间的空白间隙
+                cellpadding 单元格的内边距
+                align 表格的对齐方式（center|left|right）
+                rowspan 跨行
+                colspan 跨列
+    -->
+    <table border="1px" cellspacing="0" cellpadding="10px" align="center">
+        <thead>
+            <tr>
+                <th colspan="3">成绩表</th>
+            </tr>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>语文</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td rowspan="2">数学</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>85</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>

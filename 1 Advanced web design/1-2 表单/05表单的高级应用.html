@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单的高级应用</title>
+</head>
+
+<body>
+    <!-- 高级应用
+            1.隐藏域 hidden
+            2.只读 readonly
+            3.禁用 disabled
+            4.占位符  placeholder 提示作用，光标进入就不显示了
+        表单验证：
+            required 不为空
+            pattern 内容填写正则表达式
+        正则表达式：
+            以 ^开始 $结尾
+            [] 可选字符 例如:[abc] 可以选择abc中任意一个
+            {} 可以出现的次数 例如：{3,6} 可以出现3-6次
+    -->
+    <form action="success.html" method="get">
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" name="user1" id="user1" value="贾清冉" readonly></td>
+            </tr>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" name="user2" id="user2" value="李俊杰" disabled></td>
+            </tr>
+            <tr>
+                <td>用户名（必填）</td>
+                <td><input type="text" name="user3" id="user3" required value="csl"></td>
+            </tr>
+            <tr>
+                <td>用户名6-12字符（必填）</td>
+                <td><input type="text" name="user3" id="user3" pattern="^[a-zA-Z\u4e00-\u9fa5][a-zA-Z\d]{5,11}$"></td>
+            </tr>
+            <tr>
+                <td>密文：</td>
+                <td><input type="hidden" name="pass" value="abc123"></td>
+            </tr>
+            <tr>
+                <td>邮箱：</td>
+                <td><input type="email" name="email" id="email" placeholder="zhangsan@123.com"></td>
+            </tr>
+            <tr>
+                <td>注册</td>
+                <td><input type="submit" value="注册"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    table {
+        border-spacing: 0;
+        border: 3px solid black;
+        margin: 50px auto;
+        width: 400px;
+    }
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+    }
+
+    /* 每一行的第一个td设置 右对齐 */
+    tr td:first-child {
+        text-align: right;
+    }
+</style>
+
+</html>

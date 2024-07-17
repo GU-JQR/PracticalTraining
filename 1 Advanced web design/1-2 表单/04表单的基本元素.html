@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- table>tr*3>td*2
+        form: 表单盒子
+            属性：action（提交的位置）method：（提交的方式）get|post（必须提交服务器）|put|delete
+        input：常用标签，根据type类型值的不同，获取不同的表单元素
+            type类型：
+                text 单行文本框
+                password 密码框 
+                radio 单选按钮 分组使用name=”相同的值“  默认选中checked
+                label标签 标注 for="指向被标注标签的id值"
+                checkbox 复选框
+                selected 下拉列表
+                submit 提交按钮 点击可以发送
+                reset  重置按钮 点击后刷新数据
+                image  图片按钮 点击后可以发送
+                button 一般按钮 点击后不能发送
+        select：下拉列表
+                size 战术数量
+                name 提交的名称
+                value 提交的值
+
+    -->
+    <form action="#" method="">
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" name="user" id="user"></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" name="pass" id="pass"></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <input type="radio" name="gender" id="male" checked><label for="male">男</label>&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" id="female"><label for="female">女</label>
+                </td>
+            </tr>
+            <tr>
+                <td>爱好</td>
+                <td>8
+                    <input type="checkbox" name="inst" id="climb" value="climb"><label
+                        for="climb">爬山</label>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="inst" id="playgame" value="playgame"><label
+                        for="playgame">电竞</label>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="inst" id="swim" value="swim"><label
+                        for="swim">游泳</label>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="inst" id="ride" value="ride"><label
+                        for="ride">骑行</label>&nbsp;&nbsp;&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>上传图片：</td>
+                <td><input type="file" name="picTou" id="picTou"></td>
+            </tr>
+            <tr>
+                <td>用途：</td>
+                <td>
+                    <select name="use" id="use" size="1">
+                        <option value="研究">研究</option>
+                        <option value="测试" selected>测试</option>
+                        <option value="资料">资料</option>
+                        <option value="讨论">讨论</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>个人简介</td>
+                <td>
+                    <textarea name="intr" id="intr" rows="5" cols="30"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="注册"></td>
+                <td><input type="reset" value="重置"></td>
+            </tr>
+            <tr>
+                <td>图片按钮:</td>
+                <td><input type="image" src="img/renren.gif" alt=""></td>
+            </tr>
+            <tr>
+                <td>一般按钮</td>
+                <td><input type="button" value="注册"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    table {
+        border-spacing: 0;
+        border: 3px solid black;
+        margin: 50px auto;
+        width: 400px;
+    }
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+    }
+
+    /* 每一行的第一个td设置 右对齐 */
+    tr td:first-child {
+        text-align: right;
+    }
+</style>
+
+</html>

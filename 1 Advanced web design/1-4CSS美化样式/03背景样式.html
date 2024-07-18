@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 背景样式
+        1.背景颜色  background-color
+        2.背景图片: (背景资源位置,背景图片重复方式,背景图片定位)
+                background-image 图片位置
+                background-repeat 图片重复方式   repeat-x|repeat-y|repeat|no-repeat
+                background-position 图片定位  图片定位 x方向 y方向
+                                    关键词    left    right    center
+                                    像素值
+                                    百分比    50%    50%
+                    注意:背景图片居于背景颜色的上方的,会遮挡背景色,文字居于背景图片上方
+        3.背景图片尺寸大小:
+                        background-size auto|cover(完全遮盖容器) |contain(等比例缩放之后覆盖)
+    简写:可以将背景颜色,背景图片的属性使用background来简写,没有顺序的要求
+        background:背景颜色 图片定位 背景图片 图片重复方式
+-->
+
+<body>
+    <div>
+        教育改变生活
+    </div>
+</body>
+<style>
+    div {
+        width: 300px;
+        height: 200px;
+        /* background-color: red;
+        background-image: url(img/celery.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% center; */
+        background: red left center url(img/celery.jpg) no-repeat;
+        background-size: contain;
+    }
+</style>
+
+</html>

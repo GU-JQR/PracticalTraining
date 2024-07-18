@@ -11,16 +11,32 @@
             2.text-align 文本对齐方式   left|center|right
             3.text-decoration   文本修饰    下滑线|删除线|上划线|none
             4.line-height   行高    段落文本中每一行文字所占据的高度,被行高设置的一行文字默认在行高中的中间位置
-
+            5.text-indent 首行缩进
+    文本阴影:
+            text-shadow:阴影颜色 水平位置偏移值 垂直位置偏移值 模糊半径大小              
+                                x偏移   y偏移同时取正值  阴影右下偏移
+    文本和图片垂直对齐:
+            vertical-align
 -->
 
 <body>
-    <p>vscode 全称为 Visual Studio Code ，是⼀款免费开源的现代化轻量级代码编辑器，⽀持⼏乎所有主流的开发语⾔的语法⾼亮、智能代码补全、⾃定义快捷键、括号匹配和颜⾊区分、代码⽚段、代码对⽐
+    <p>vscode 全称为 Visual Studio Code ，是⼀款免费开源的现代化轻量级代码编辑器，<img src="img/celery.jpg" alt="">
+        ⽀持⼏乎所有主流的开发语⾔的语法⾼亮、智能代码补全、⾃定义快捷键、括号匹配和颜⾊区分、代码⽚段、代码对⽐
         Diff、GIT命令 等特性，⽀持插件扩展，并针对⽹⻚开发和云端应⽤开发做了优化。</p>
 </body>
 <style>
     p {
         color: blue;
+        text-align: left;
+        text-decoration: underline;
+        line-height: 30px;
+        text-indent: 2em;
+        text-shadow: green 2px 2px 2px;
+    }
+
+    p,
+    img {
+        vertical-align: middle;
     }
 </style>
 

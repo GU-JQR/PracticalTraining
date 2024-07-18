@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 字体样式
+        1.字体大小  font-size   像素值px|比例值em,rem|关键词
+                                em:根据父元素的比例设置
+                                rem:(root)根据网页根元素的比例设置  根元素html
+        2.字体粗细  font-weight 磅值 400正常 700加粗 |关键词bold
+        3.字体倾斜  font-size   italic倾斜
+        4.字体类型  font-family
+    注意:中英文字混合使用的时候,英文样式放在前面
+
+    简写:
+        font:样式  粗细  大小  类型  
+
+    字体颜色:
+        color  字体颜色  rgb(255,255,255)   rgba(255,255,0,0.5) 半透明
+                        十六进制 最小0  最大F
+                        #六位十六进制    两位代表一个颜色的分量值
+                            #FF0000 代表红色
+                            特殊 #FFFFFF 代表白色 #000000 代表黑色
+        学会取色器的使用colors.exe
+
+-->
+
+<body>
+    <div>
+        <p>南京中博NJZBO软件培训机构</p>
+    </div>
+
+</body>
+<style>
+    html {
+        font-size: 16px;
+    }
+
+    div {
+        font-size: 14px;
+    }
+
+    p {
+        /* font-family: 'Courier New', Courier, monospace, "宋体";
+        font-size:1rem
+        font-size: 1em;
+        font-weight: 700;
+        font-style: italic; */
+        font-size: initial 700 1rem 'Courier New', Courier, monospace, "宋体";
+        /* color: #b3b3b3; */
+        color: rgba(242, 122, 107, 0.5);
+    }
+</style>
+
+</html>

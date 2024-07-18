@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器</title>
+</head>
+<!-- 结构伪类选择器:
+        一.nth-child
+            first-child
+            last=child
+            nth-chid(n) nth-child(odd) nth-child(even)
+
+        二.nth-of-type
+            first-of-type
+            last-of-type
+            nth-of-type(n) nth-of-type(odd) nth-of-type(even)
+    
+    两个区别:nth-chid解析的时候,先找第几个,再筛选是否满足类型
+            nth-of-type解析的时候,先找到满足条件的类型,再判断选择第几个
+    优先级:
+        高级选择器 > 基本选择器
+-->
+
+<body>
+    <span>span</span>
+    <p id="p1">p1</p>
+    <p id="p2">p2</p>
+    <h1>h1</h1>
+    <p>p3</p>
+    <ul>
+        <li>
+            <p>p4</p>
+        </li>
+        <li>
+            <p>p5</p>
+        </li>
+        <li>
+            <p>p6</p>
+        </li>
+    </ul>
+</body>
+<style>
+    /* 选择body下面第一个孩子p元素 */
+    body>p:first-child {
+        background-color: red;
+    }
+
+    /* 选择body子元素中第一个p元素 */
+    body>P:first-of-type {
+        background-color: blue;
+    }
+
+    /* 选择body最后一个孩子p */
+    body>p:last-child {
+        background-color: goldenrod;
+    }
+
+    /* 选择body子元素最后一个孩子p */
+    body>p:last-of-type {
+        background-color: darkred;
+    }
+
+    /* 选择body第二个孩子p元素 */
+    body>p:nth-child(2) {
+        background-color: greenyellow;
+    }
+
+    /* 选择body子元素中第二个p元素 */
+    body>p:nth-of-type(2) {
+        background-color: pink;
+    }
+
+    /* 层级优先级低于高级选择器 强制提高优先级 !important*/
+    p {
+        background-color: yellow !important;
+    }
+</style>
+
+</html>

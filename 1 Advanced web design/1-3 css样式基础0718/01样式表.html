@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三种样式</title>
+    <!-- 在style标签里面,浏览器认为里面是css样式的语法 -->
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+    <style>
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: green;
+        }
+    </style>
+    <!-- 引入外部样式 -->
+    <link rel="stylesheet" href="css/样式表.css">
+</head>
+
+<!-- 三种样式表:
+        1.外部样式 将元素和样式分离管理,需要通过link标签引入外部css样式
+        2.内部样式 用一个style标签包裹起来,在html文件中直接写样式
+        3.行内样式  在标签内使用style属性,通过值编写样式,三种样式它的优先级最高
+        优先级:行内>内部=外部 (就近原则)
+
+
+        -->
+
+<body>
+    <h1>当前流行课程</h1>
+    <p style="font-size:24px;font-weight: bold;">嵌入式开发</p>
+    <p>鸿蒙系统开发</p>
+    <p>全栈开发</p>
+    <p>云计算开发</p>
+    <p>大数据</p>
+    <p>人工智能</p>
+</body>
+
+
+</html>

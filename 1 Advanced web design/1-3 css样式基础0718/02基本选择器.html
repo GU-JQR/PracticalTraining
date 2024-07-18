@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 基本选择器:
+            1.ID选择器 使用方法    #id的名称{样式:值}
+            2.类选择器             .class的名称{样式名:样式值},可以同时使用多个 在class属性中用空格隔开
+            3.标签选择器           标签名{} 有点:直观,方便 缺点
+    
+    -->
+
+<body>
+
+    <h1>当前流行课程</h1>
+    <p id="p1">嵌入式开发</p>
+    <p class="os">鸿蒙系统开发</p>
+    <p class="java">全栈开发</p>
+    <p class="net">云计算开发</p>
+    <p class="java import">大数据</p>
+    <p class="ai">人工智能</p>
+</body>
+<style>
+    #p1 {
+        background-color: red;
+    }
+
+    .java {
+        color: blue;
+        background-color: #ccc;
+    }
+
+    .ai {
+        color: purple;
+        background-color: #ccc;
+    }
+
+    .import {
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+</style>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 层次选择器
+            1.后代关系   E  F   会选中E所有的后代F
+            2.父子关系   E>F    会选中E所有的子代F
+            3.相邻兄弟   E+F    会选中E后面紧挨着的F元素,如果F不存在,代表什么都没选中
+            4.通用兄弟   E~F    会选中E后面同辈元素中的F元素,如果同辈中没有F,代表什么都没选中
+
+
+
+-->
+
+<body>
+    <p id="p1">p1</p>
+    <p id="p2">p2</p>
+    <h1>h1</h1>
+    <p>p3</p>
+    <ul>
+        <li>
+            <p>p4</p>
+        </li>
+        <li>
+            <p>p5</p>
+        </li>
+        <li>
+            <p>p6</p>
+        </li>
+    </ul>
+</body>
+<style>
+    body p {
+        background-color: red;
+    }
+
+    body>p {
+        background-color: blue;
+    }
+
+    #p2+p {
+        background-color: greenyellow;
+    }
+
+    #p2~p {
+        background-color: gold;
+    }
+</style>
+
+</html>

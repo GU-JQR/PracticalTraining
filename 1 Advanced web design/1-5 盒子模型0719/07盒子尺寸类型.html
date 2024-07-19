@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子尺寸类型</title>
+</head>
+
+<body>
+    <div></div>
+    <div class="big">
+        <div class="small"></div>
+        <div class="small"></div>
+        <div class="small"></div>
+        <div class="small"></div>
+    </div>
+</body>
+<!-- 盒子尺寸分成两种类型:
+        box-sizing属性
+        1.内容盒子  box-sizing:content-box  在这个模式下你设置的宽和高对应的是盒子里面的内容
+        2.边框盒子  box-sizing:border-box   在这个模式下,这是的宽高对应的是包含盒子边框+内边框+内容尺寸
+
+        场景:
+        1.大盒子里面固定有几个小盒子,就可以设置边框盒子
+-->
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid blue;
+        /* box-sizing:content-box; */
+        box-sizing: border-box;
+    }
+
+    .big {
+        width: 800px;
+        height: 200px;
+        border: 1px solid blue;
+        margin: 10px auto;
+        box-sizing: content-box;
+    }
+
+    .small {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        float: left;
+    }
+</style>
+
+</html>

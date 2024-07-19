@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>span圆形制作</title>
+</head>
+
+<body>
+    <ul>
+        <li><span>1</span><a href="#">欧莱雅</a></li>
+        <li><span>2</span><a href="#">雅诗兰黛</a></li>
+    </ul>
+</body>
+
+<style>
+    /* 思路
+            span变成圆形 设置宽高,但是span行元素不能设置,->改变元素性质 
+            将它变成行内块元素  display:inline-block
+
+    */
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    ul {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    li {
+        line-height: 30px;
+        border-bottom: 1px dashed #aaa;
+    }
+
+    li span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: black;
+        line-height: 20px;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+    }
+
+    li a {
+        text-decoration: none;
+        color: #ccc;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    li:hover span {
+        background: pink;
+    }
+
+    li:hover a {
+        color: pink;
+    }
+</style>
+
+</html>

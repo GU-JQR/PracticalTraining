@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角边框</title>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+</body>
+<!-- 圆角边框:border-radius:左上  右上  右下  左下
+            像素值越大,弧度越大
+        特殊图形:
+            1.圆形:正方向设置四个圆角边框等于边长的一半
+                    像素值:正方向设置四个角边框等于边长的一半
+                    百分比:50%
+            2.半圆:
+                    长方形,长是宽的两倍
+                    设置两个弧度是宽度的像素值
+            3.扇形：四分之一圆  正方形，其中一个角
+
+
+-->
+<style>
+    #d1 {
+        background-color: green;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    #d2 {
+        background-color: blue;
+        margin: 0 auto;
+        width: 200px;
+        height: 100px;
+        /* 上半圆 */
+        /* border-radius: 100px 100px 0px 0px; */
+        /* 下半圆 */
+        border-radius: 0px 0px 100px 100px;
+    }
+</style>
+
+</html>

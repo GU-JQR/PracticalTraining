@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学员免费体检</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .main {
+            background: url(img/bg.jpg) no-repeat;
+            background-size: cover;
+            width: 312px;
+            height: 353px;
+            /* padding-top: 50px; */
+        }
+
+        form {
+            padding-top: 80px;
+            padding-left: 10px;
+        }
+
+        input {
+            height: 20px;
+            border-radius: 5px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        td {
+            padding: 3px 5px;
+        }
+
+        td {
+            color: white;
+        }
+
+        tr>td:first-of-type {
+            text-align: right;
+        }
+
+        img {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form action="#" method="get">
+            <table>
+                <tr>
+                    <td><span class="red">*</span>姓名：</td>
+                    <td><input type="text" name="user" id="user"></td>
+                </tr>
+                <tr>
+                    <td><span class="red">*</span>邮箱： </td>
+                    <td><input type="email" name="em" id="em"></td>
+                </tr>
+                <tr>
+                    <td><span class="red">*</span>电话： </td>
+                    <td><input type="text" name="num" id="num"></td>
+                </tr>
+                <tr>
+                    <td>性别：</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">请选择</option>
+                            <option value="">男</option>
+                            <option value="">女</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>年龄：</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">请选择</option>
+                            <option value="">10</option>
+                            <option value="">20</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><img src="img/btn.jpg" alt=""></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

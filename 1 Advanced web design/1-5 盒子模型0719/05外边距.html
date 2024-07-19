@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距</title>
+</head>
+
+<body>
+    <!-- 外边距: margin
+                四个方向    margin-left |   margin-right    |margin-bottom|margin-top
+                简写:margin:上 右 下 左;    没有写出的找对边
+                    例如:margin:10px   5px;代表 上下外边距10像素    ,左右的外边距5像素
+                        margin:10px 5px 8px;达标 上外边距10像素,下外边距8像素,右外边距5像素,左外边距等于右边距
+                元素在浏览器居中:
+                    margin:0px auto;代表一个块元素,左右外边距相同
+                注意:使用margin让元素居中前提条件
+                    1.元素块元素(只有块元素才可以设置width,height)
+                    2.元素固定宽度(块元素默认宽度,)
+                    3.margin:0px auto;
+    
+    -->
+    <div id="d1"></div>
+    <div id="d2"></div>
+</body>
+<style>
+    #d1 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid blue;
+        margin: 50px auto;
+    }
+
+    #d2 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+</style>
+
+</html>

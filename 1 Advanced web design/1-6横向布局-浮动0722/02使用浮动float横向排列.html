@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动横向排列</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <span>我是span</span>
+</body>
+<!-- 浮动:    float  让元素脱离标准文档流,显示在标准文档流上一层,原先在标准文档流中的位置会丢失,被后面的元素所替代
+                值:left  元素从左到右依次脱离标准文档流
+                    right 元素从右到左依次脱离标准文档流
+                    none 不浮动
+                    元素之间没有间隙的
+
+
+
+-->
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        float: right;
+        width: 50px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        border: 1px solid red;
+    }
+
+    /* li:first-child {
+        float: left;
+    } */
+
+    span {
+        background-color: yellowgreen;
+    }
+</style>
+
+</html>

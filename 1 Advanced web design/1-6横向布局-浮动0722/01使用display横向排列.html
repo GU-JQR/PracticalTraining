@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display横向浮动</title>
+</head>
+<!-- display属性  设置元素标签性质
+                值:block 表示块元素 独占一行 (h1-h6 p div header section footer)
+                    inline 表示行元素 尺寸根据内容大小变化,不能设置宽和高(span a img i strong b ...)
+                    inline-block 表示行内块元素 同时具有在一行显式并且可以设置宽高的性质 表格 td th
+                    none 不显示
+
+            display 横向排列缺点:
+                    1.排列的元素之间间隙无法去除
+                    2.无法控制元素的方向
+
+
+
+
+-->
+
+<body>
+    <div>
+        div
+    </div>
+    <span>
+        span
+    </span>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        display: inline-block;
+    }
+
+    span {
+        width: 100px;
+        height: 100px;
+        border: 1px solid blue;
+        /* display: inline-block; */
+        display: none;
+    }
+
+    ul li {
+        display: inline-block;
+        border: 1px solid red
+    }
+</style>
+
+</html>

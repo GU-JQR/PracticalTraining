@@ -5,6 +5,359 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>京东登录页</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /* 通用的解决边框塌陷的方法 双伪类方法 */
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* 头部 */
+        header {
+            height: 87px;
+            background-color: #fff;
+            line-height: 60px;
+            height: 60px;
+        }
+
+        /* logo */
+        .logo {
+            float: left;
+            width: 300px;
+            height: 60px;
+            background: url(https://misc.360buyimg.com/lib/img/e/logo-201305-b.png) 0 0 no-repeat;
+            background-size: contain;
+        }
+
+        .logo,
+        h2 {
+            vertical-align: middle;
+        }
+
+        header h2 {
+            font-size: 25px;
+            font-weight: 700;
+            font-family: "黑体";
+            color: #3b3b3b;
+        }
+
+        /* 隐私政策 */
+        .tip {
+            background: rgba(255, 248, 240, 0.5);
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+        }
+
+        /* 中间部分 content 背景色 红色
+            warp 990像素宽 居中 */
+
+        .content {
+            background-color: #5C0E0A;
+        }
+
+        .wrap {
+            width: 990px;
+            margin: 0 auto;
+        }
+
+        .login-wrap {
+            height: 475px;
+            background: url(https://img1.360buyimg.com/pop/jfs/t1/245767/33/14402/90035/669669a8Fa7f5a27e/eac3b40d1161f586.jpg) 0 0 no-repeat;
+
+        }
+
+        .login-form {
+            width: 347px;
+            height: 280px;
+            /* background-color: #fff; */
+            float: right;
+            margin-top: 40px;
+        }
+
+        header p {
+            float: right;
+            font-size: 12px;
+            margin-top: 20px;
+            color: #999;
+        }
+
+        header p:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        header h2 {
+            float: left;
+        }
+
+        .tip a {
+            color: #338EC5;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .tip a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            /* border: 1px dashed blue; */
+            width: 990px;
+            height: 70px;
+            margin: 0 auto;
+        }
+
+        .footer ul {
+            /* border: 1px dashed purple; */
+            overflow: hidden;
+            width: 810px;
+            margin: 10px auto;
+        }
+
+        .footer ul li {
+            /* list-style-type: none; */
+            /* border: 1px dashed blue; */
+            float: left;
+            padding: 0px 16px;
+            border-right: 1px solid #666;
+            line-height: 12px;
+        }
+
+        .footer ul li:last-of-type {
+            border-right: none;
+        }
+
+        .footer ul li a {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .footer ul li a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+
+        .footer p {
+            /* border: 1px dashed blue; */
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .loginbox {
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .loginbox form {
+            overflow: hidden;
+            width: 308px;
+            padding: 0px 20px;
+            position: relative;
+            top: 35px;
+            /* margin-top: 50px; */
+        }
+
+        .loginbox form p {
+            /* border: 1px solid red; */
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        .loginbox form p label {
+            border: 1px solid #bdbdbd;
+            float: left;
+            height: 38px;
+            width: 38px;
+            background: url(../img/icon1.jpg) no-repeat;
+            border-right: none;
+        }
+
+        .loginbox form p:nth-of-type(2) label {
+            background: url(../img/icon2.jpg) no-repeat;
+        }
+
+        .loginbox form p a {
+            /* background: url(../img/icon2.jpg) no-repeat; */
+            font-size: 12px;
+            float: right;
+            color: #666;
+        }
+
+        .loginbox form p a:hover {
+            color: #E93854;
+            text-decoration: underline;
+        }
+
+        .loginbox form p input[type="text"],
+        .loginbox form p input[type="password"] {
+            /* border: 1px solid red; */
+            height: 38px;
+            width: 300px;
+            text-indent: 10px;
+            font-size: 14px;
+            border: 1px solid #bdbdbd;
+        }
+
+        .loginbox form p input[type="submit"] {
+            border: 1px solid #FD9D94;
+            width: 308px;
+            height: 35px;
+            line-height: 35px;
+            background-color: #FD9D94;
+            color: white;
+            font-size: 20px;
+            font-family: "微软雅黑";
+            cursor: pointer;
+            margin-top: -30px;
+            position: relative;
+            top: -13px;
+        }
+
+        .lastway {
+            border-top: 1px solid #ddd;
+            height: 52px;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            padding-left: 10px;
+            box-sizing: border-box;
+            background-color: #F7F7F7;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .lastway ul li {
+            /* border: 1px solid red; */
+            float: left;
+            width: 60px;
+        }
+
+        .lastway ul li:last-of-type {
+            /* border: 1px solid red; */
+            float: right;
+            width: 100px;
+            margin-right: 20px;
+
+        }
+
+        .lastway ul li a {
+            /* border: 1px solid red; */
+            color: #666;
+            font-size: 12px;
+            display: inline-block;
+            height: 52px;
+            line-height: 52px;
+            padding-left: 23 px;
+            background: url(../img/icon7.jpg) 0px no-repeat;
+            margin-left: 13px;
+            text-decoration: none;
+        }
+
+        .lastway ul li:nth-of-type(2) a {
+            background: url(../img/icon8.jpg) 0px no-repeat;
+        }
+
+        .lastway ul li:nth-of-type(3) a {
+            background: url(../img/icon5.jpg) 0px no-repeat;
+            color: #b61d1d;
+            font-size: 14px;
+
+        }
+
+        .lastway ul li a:hover {
+            color: #E93854;
+            /* text-decoration: underline; */
+        }
+
+        .lastway span {
+            /* border: 1px solid red; */
+            position: absolute;
+            top: 17px;
+            left: 70px;
+            color: #D5CCD5;
+        }
+
+        .loginbox {
+            border: 1px solid yellow;
+            width: 348px;
+            height: 400px;
+            float: right;
+            top: 10px;
+            background-color: white;
+            position: relative;
+
+        }
+
+        .loginbox>p:first-of-type {
+            height: 40px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 40px;
+            color: red;
+            background: #FFF8F0 url(../img/icon6.jpg) 18px no-repeat;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .loginbox>p:first-of-type+div {
+            /* border-bottom: 1px solid #ddd; */
+            height: 53px;
+
+        }
+
+        .mytitle {
+            /* border: 1px solid green; */
+            /* background-color: pink; */
+            float: left;
+            width: 49%;
+            height: 100%;
+            text-align: center;
+            padding-top: 13px;
+            box-sizing: border-box;
+        }
+
+        .mytitle a {
+            /* border: 1px solid green; */
+            display: inline-block;
+            width: 100%;
+            /* font-weight: 700; */
+            color: #666;
+            font-size: 18px;
+            font-family: "微软雅黑";
+            text-decoration: none;
+        }
+
+        .mytitle a:hover {
+            font-weight: 700;
+            color: #E93854;
+        }
+
+        .myative a {
+            /* border: 1px solid blue; */
+            font-weight: 700;
+            color: #E93854;
+            border-left: 1px solid #ddd;
+        }
+
+        input {
+            border-radius: 5px;
+        }
+
+        img,
+        .lastway ul li a {
+            vertical-align: middle;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,103 +366,69 @@
             <div class="wrap">
                 <div class="logo"></div>
                 <h2>欢迎登录</h2>
+                <p>
+                    <img src="	https://storage.jd.com/retail-mall/jdc_user_passport/pc/user/passport/1.1.1/css/i/q-icon.png"
+                        alt=""> 登录页面,改进建议
+                </p>
             </div>
         </header>
         <div class=" tip">
-            <p class="wrap">依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版《京东隐私政策》已上线，将更有利于保护您的个人隐私。
+            <p class="wrap">依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新 <a href="#">《京东隐私政策》</a>版已上线，将更有利于保护您的个人隐私。
             </p>
         </div>
         <article class="content">
             <div class="wrap login-wrap">
-                <div class="login-form"></div>
+                <div class="loginbox">
+                    <p>京东不会以任何理由要求您转账汇款，谨防诈骗。</p>
+                    <div>
+                        <div class="mytitle myative">
+                            <a href="#">密码登录</a>
+                        </div>
+                        <div class="mytitle ">
+                            <a href="#">短信登录</a>
+                        </div>
+                    </div>
+                    <form action="#">
+                        <p>
+                            <input type="text" id="uname" placeholder="邮箱/账号名/登录手机" />
+                        </p>
+                        <p>
+                            <input type="password" id="psw" placeholder="密码" />
+                        </p>
+                        <p><a href="#">忘记密码</a></p>
+                        <p>
+                            <input type="submit" name="" value="登      录">
+                        </p>
+                    </form>
+                    <!-- last -->
+                    <div class="lastway">
+                        <!-- 其他登录 -->
+                        <ul>
+                            <li><img src="img/icon7.jpg" alt=""><a href="#">QQ</a></li>
+                            <li><img src="img/icon8.jpg" alt=""><a href="#">微信</a></li>
+                            <li><a href="#">立即注册</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </article>
-        <footer></footer>
+        <div class="footer">
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">商家入驻</a></li>
+                <li><a href="#">广告服务</a></li>
+                <li><a href="#">手机京东</a></li>
+                <li><a href="#">友情链接</a></li>
+                <li><a href="#">销售联盟</a></li>
+                <li><a href="#">京东社区</a></li>
+                <li><a href="#">京东公益</a></li>
+            </ul>
+            <p>Copyright&nbsp;&nbsp;&copy;&nbsp;2004-2022&nbsp;京东JD.com&nbsp;版权所有</p>
+        </div>
     </div>
 </body>
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
 
-    /* 通用的解决边框塌陷的方法 双伪类方法 */
-    .clearfix::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-
-    /* 头部 */
-    header {
-        height: 87px;
-        background-color: #fff;
-        line-height: 60px;
-        height: 60px;
-    }
-
-    /* logo */
-    .logo {
-        float: left;
-        width: 300px;
-        height: 60px;
-        background: url(https://misc.360buyimg.com/lib/img/e/logo-201305-b.png) 0 0 no-repeat;
-        background-size: contain;
-    }
-
-    .logo,
-    h2 {
-        vertical-align: middle;
-    }
-
-    header h2 {
-        font-size: 25px;
-        font-weight: 700;
-        font-family: "黑体";
-        color: #3b3b3b;
-    }
-
-    /* 隐私政策 */
-    .tip {
-        background: rgba(255, 248, 240, 0.5);
-        height: 40px;
-        line-height: 40px;
-        font-size: 12px;
-        color: #999;
-        text-align: center;
-    }
-
-    .tip p>a {
-        font-size: 14px;
-        color: #999;
-    }
-
-    /* 中间部分 content 背景色 红色
-        warp 990像素宽 居中 */
-
-    .content {
-        background-color: #5C0E0A;
-    }
-
-    .wrap {
-        width: 990px;
-        margin: 0 auto;
-    }
-
-    .login-wrap {
-        height: 475px;
-        background: url(https://img1.360buyimg.com/pop/jfs/t1/245767/33/14402/90035/669669a8Fa7f5a27e/eac3b40d1161f586.jpg) 0 0 no-repeat;
-
-    }
-
-    .login-form {
-        width: 347px;
-        height: 280px;
-        background-color: #fff;
-        float: right;
-        margin-top: 40px;
-    }
-</style>
 
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东登录页</title>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <div class="wrap">
+                <div class="logo"></div>
+                <h2>欢迎登录</h2>
+            </div>
+        </header>
+        <div class=" tip">
+            <p class="wrap">依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版《京东隐私政策》已上线，将更有利于保护您的个人隐私。
+            </p>
+        </div>
+        <article class="content">
+            <div class="wrap login-wrap">
+                <div class="login-form"></div>
+            </div>
+        </article>
+        <footer></footer>
+    </div>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    /* 通用的解决边框塌陷的方法 双伪类方法 */
+    .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    /* 头部 */
+    header {
+        height: 87px;
+        background-color: #fff;
+        line-height: 60px;
+        height: 60px;
+    }
+
+    /* logo */
+    .logo {
+        float: left;
+        width: 300px;
+        height: 60px;
+        background: url(https://misc.360buyimg.com/lib/img/e/logo-201305-b.png) 0 0 no-repeat;
+        background-size: contain;
+    }
+
+    .logo,
+    h2 {
+        vertical-align: middle;
+    }
+
+    header h2 {
+        font-size: 25px;
+        font-weight: 700;
+        font-family: "黑体";
+        color: #3b3b3b;
+    }
+
+    /* 隐私政策 */
+    .tip {
+        background: rgba(255, 248, 240, 0.5);
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        color: #999;
+        text-align: center;
+    }
+
+    .tip p>a {
+        font-size: 14px;
+        color: #999;
+    }
+
+    /* 中间部分 content 背景色 红色
+        warp 990像素宽 居中 */
+
+    .content {
+        background-color: #5C0E0A;
+    }
+
+    .wrap {
+        width: 990px;
+        margin: 0 auto;
+    }
+
+    .login-wrap {
+        height: 475px;
+        background: url(https://img1.360buyimg.com/pop/jfs/t1/245767/33/14402/90035/669669a8Fa7f5a27e/eac3b40d1161f586.jpg) 0 0 no-repeat;
+
+    }
+
+    .login-form {
+        width: 347px;
+        height: 280px;
+        background-color: #fff;
+        float: right;
+        margin-top: 40px;
+    }
+</style>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框塌陷</title>
+</head>
+
+<body>
+    <div class="father">
+        <p></p>
+        <p></p>
+        <div class="listChild"></div>
+    </div>
+    <div class="behind"></div>
+    <div class="behind2"></div>
+</body>
+<!--造成边框塌陷的原因:父盒子中全部子元素设置了浮动,脱离了标准文档,导致父盒子高度没有了支撑 
+    塌陷之后造成的不良后果:布局不可控
+    如何解决边框塌陷呢?
+                技术点:清除浮动  clear属性   clear:left|right|both
+                    要点:在父盒子中最下面元素可以清除上面的元素浮动
+        总结边框塌陷的几个方法:
+            1.给父盒子设置height高度
+            2.伪类after. 假设父盒子存在最后一个孩子,并且给最后孩子元素清除两端浮动
+                .father:after{content:"",display:block;clear:both;}
+            3.通过overflow属性 溢出隐藏
+            4.在父盒子中留一个最后子元素(块元素),并设置clear:both;
+
+
+-->
+<style>
+    .father {
+        border: 2px solid blue;
+        /* overflow: auto; */
+    }
+
+    p {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        float: left;
+    }
+
+    /* 清除父盒子中浮动的影响 */
+
+    /* .listChild {
+        clear: both;
+    } */
+
+    /* .father:after {
+        content: "";
+        display: block;
+        clear: both;
+    } */
+
+    .behind {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+    }
+
+    .behind2 {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+    }
+</style>
+
+</html>

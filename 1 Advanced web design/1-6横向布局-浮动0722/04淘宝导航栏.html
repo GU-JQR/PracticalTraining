@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝导航条</title>
+    <link rel="stylesheet"
+        href="https://at.alicdn.com/t/c/font_4628573_jf6ur12u2rg.css?spm=a313x.manage_type_myprojects.i1.9.4f093a81MFDurZ&file=font_4628573_jf6ur12u2rg.css">
+</head>
+
+<body>
+    <div class="warp">
+        <nav>
+            <ul class="left">
+                <li><a href="#">中国大陆</a><i class="iconfont icon-down"></i></li>
+                <li><a href="#" class="active">亲,请登录</a></li>
+                <li><a href="#">免费注册</a></li>
+                <li><a href="#">手机逛淘宝</a></li>
+                <li><a href="#">网页无障碍</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="#">我的淘宝</a><i class="iconfont icon-down"></i></li>
+                <li><i class="iconfont icon-cart-empty active"></i><a href="#">购物车</a></li>
+                <li><i class="iconfont icon-favorites-fill"></i><a href="#">收藏夹</a><i class="iconfont icon-down"></i>
+                </li>
+                <li><a href="#">商品名</a></li>
+                <li><a href="#">商品分类</a></li>
+                <li><a href="#">免费开店</a><i class="iconfont icon-down"></i></li>
+                <li><a href="#">千牛卖家中心</a><i class="iconfont icon-down"></i></li>
+                <li><a href="#">帮助中心</a><i class="iconfont icon-down"></i></li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav {
+        margin: 0 auto;
+        width: 1709px;
+        height: 42px;
+        background: #f5f5f5;
+        /* 文字垂直居中 行高和高度保持一致 */
+        line-height: 42px;
+    }
+
+    .warp {
+        background: #f5f5f5;
+    }
+
+    /* 两个列表一左一右 左右两个列表离浏览器左右两边距离140像素*/
+    .left {
+        float: left;
+        margin-left: 140px;
+    }
+
+    .right {
+        float: right;
+        margin-right: 140px;
+    }
+
+    /* 列表中的元素 横向排列 */
+    .left li {
+        float: left;
+    }
+
+    .right li {
+        float: left;
+    }
+
+    /* 超链接字体修改必须在a标签选择器下 */
+    li a {
+        font-size: 14px;
+        color: #6a6a6a;
+        text-decoration: none;
+        margin: 0px 10px;
+        font-weight: 700;
+    }
+
+    .active {
+        color: red;
+    }
+</style>
+
+</html>

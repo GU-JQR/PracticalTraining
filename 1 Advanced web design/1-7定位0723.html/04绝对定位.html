@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位</title>
+</head>
+
+<body>
+    <div class="father">
+        <div class="first"></div>
+        <div class="second">第二个元素</div>
+        <div class="third"></div>
+        <div>保留原来位置</div>
+    </div>
+</body>
+<!-- 定位 position
+                值:
+                    1. static  静止的   默认值
+                    2. 相对定位:relative  参照物是谁?  本身  偏移之后是否保留原来的位置? 是
+                            作用:设置了position:relative;但是不设置偏移位置,这样可以保持元素不动,作为其他定位的参照物.
+                    3.绝对定位:absolute
+                            参照物是谁?
+                                绝对定位的元素参照已经定位了的最近的一个祖先元素,如果所有祖先元素都没有设置定位,他会参照浏览器.
+                                是否 保留原来的位置? 不保留 被后面的元素所占据
+                                不再是块元素,宽度随内容,但是可以通过css设置宽高大小
+
+                偏移方向:所有方向的正值,指向平面直角坐标系的圆点,也可以理解成反方向
+                    left|right|top|bottom
+                注意:浮动的盒子,不再独占一行,宽度随内容变化,但是仍然保持定位的特性
+-->
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .father {
+        border: 1px solid blue;
+        width: 900px;
+        padding: 20px;
+        margin: 0 auto;
+        /* 给 father 添加一个已经定位的属性 相对|绝对|固定  */
+        position: relative;
+    }
+
+    .first {
+        background-color: red;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .second {
+        background-color: greenyellow;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .third {
+        background-color: yellow;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    /* 第二个盒子设置绝对定位,相对于父盒子右上方偏移 30 30 */
+    .second {
+        position: absolute;
+        top: 30px;
+        right: -30px;
+        width: 100px;
+        height: 50px;
+    }
+</style>
+
+</html>

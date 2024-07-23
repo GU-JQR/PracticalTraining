@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粘性定位</title>
+</head>
+
+<body>
+    <div class="tip"></div>
+    <div class="nav"></div>
+</body>
+<style>
+    /* 粘性定位,出现滚动条的时候,保持在一个我需要的位置
+        position: sticky;
+    
+    */
+    body {
+        height: 2000px;
+    }
+
+    .nav {
+        height: 80px;
+        background: pink;
+        position: sticky;
+        top: 0px;
+    }
+
+    .tip {
+        height: 60px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+</style>
+
+</html>

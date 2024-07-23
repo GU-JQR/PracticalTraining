@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定定位</title>
+</head>
+<!-- 始终参照浏览器,并且翻页滚动任然保持不变
+        讨论:固定定位以及绝对定位都偏移到浏览器右下角,他们有区别吗?
+            不同的,绝对定位参照的是浏览器的第一页界面,而固定定位始终保持
+
+-->
+
+<body>
+    <div class="abs_div">绝对定位</div>
+    <div class="fixed_div">固定定位</div>
+
+</body>
+<style>
+    body {
+        height: 3000px;
+    }
+
+    /* 让绝对定位的盒子以及固定定位的盒子都参照浏览器右下角位置偏移 */
+    .fixed_div {
+        width: 100px;
+        height: 100px;
+        background: blue;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+
+    .abs_div {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+</style>
+
+</html>

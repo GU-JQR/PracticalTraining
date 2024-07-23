@@ -25,8 +25,14 @@
             1.给父盒子设置height高度
             2.伪类after. 假设父盒子存在最后一个孩子,并且给最后孩子元素清除两端浮动
                 .father:after{content:"",display:block;clear:both;}
-            3.通过overflow属性 溢出隐藏
+            3.通过overflow属性 溢出隐藏 overflow:auto;
             4.在父盒子中留一个最后子元素(块元素),并设置clear:both;
+            5.定义clearfix样式,添加到需要解决塌陷的父盒子上
+                    .clearfix::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+        }
 -->
 <style>
     .father {

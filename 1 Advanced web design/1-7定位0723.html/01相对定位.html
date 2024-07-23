@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对定位</title>
+</head>
+
+<body>
+    <div class="father">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+        <div>保留原来位置</div>
+    </div>
+</body>
+<!-- 定位 position
+                值:
+                    1. static  静止的   默认值
+                    2. 相对定位:relative  参照物是谁?  本身  偏移之后是否保留原来的位置? 是
+                            作用:设置了position:relative;但是不设置偏移位置,这样可以保持元素不动,作为其他定位的参照物.
+                偏移方向:所有方向的正值,指向平面直角坐标系的圆点,也可以理解成反方向
+                    left|right|top|bottom
+-->
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .father {
+        border: 1px solid blue;
+        width: 900px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .first {
+        background-color: red;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .second {
+        background-color: greenyellow;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .third {
+        background-color: yellow;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    /* 第二个盒子向右上方移动  30  30像素 */
+    .second {
+        position: relative;
+        top: -30px;
+        right: -30px;
+    }
+
+    /* 第三个盒子向右下方移动 40 50 像素 */
+    .third {
+        position: relative;
+        bottom: -50px;
+        right: -40px;
+    }
+</style>
+
+</html>

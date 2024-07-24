@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ彩贝导航</title>
+</head>
+
+<body>
+    <div class="content">
+        <img src="img/logo_170x46.png" alt="" class="logo">
+        <ul>
+            <li class="li1">
+                <div class="img1"></div>
+                返回商城
+            </li>
+            <li>商旅频道</li>
+            <li class="li2">
+                <div class="img2"></div>
+                积分商城
+            </li>
+            <li>商旅频道</li>
+            <li>了解彩贝</li>
+            <li>彩贝活动</li>
+            <li>个人中心</li>
+        </ul>
+        <ul>
+            <li class="li3"><img src="img/iconsB_11.gif" alt=""></li>
+            <li class="li3"><img src="img/iconsB_12.gif" alt=""></li>
+            <li class="li3"><img src="img/iconsB_13.png" alt=""></li>
+        </ul>
+
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    .content {
+        width: 100%;
+        height: 80px;
+        background-color: rgb(248, 248, 248);
+        font-size: 18px;
+    }
+
+    .logo {
+        float: left;
+        margin-left: 140px;
+        margin-top: 10px;
+    }
+
+    ul {
+        float: left;
+        margin-left: 180px;
+        margin-top: 30px;
+    }
+
+    li {
+        float: left;
+        margin-left: 10px;
+    }
+
+    .li1,
+    .li2 {
+        position: relative;
+    }
+
+    .img1,
+    .img2 {
+        width: 38px;
+        height: 23px;
+        position: absolute;
+        top: -23px;
+        left: 0px;
+    }
+
+    .img1 {
+        background-image: url(img/header_03.png);
+        background-repeat: no-repeat;
+    }
+
+    .li1:hover .img1 {
+        animation: img1 1s linear 1 forwards;
+    }
+
+    .img2 {
+        background-image: url(img/header_07.png);
+        background-repeat: no-repeat;
+    }
+
+    .li2:hover .img2 {
+        animation: img2 1s linear 1 forwards;
+    }
+
+    @keyframes img1 {
+        0% {
+            width: 38px;
+            height: 23px;
+            background-image: url(img/header_03.png);
+        }
+
+        50% {
+            width: 52px;
+            height: 23px;
+            background-image: url(img/header_05.png);
+        }
+
+        100% {
+            width: 66px;
+            height: 23px;
+            background-image: url(img/header_05.png);
+        }
+    }
+
+    @keyframes img2 {
+        0% {
+            width: 38px;
+            height: 23px;
+            background-image: url(img/header_07.png);
+        }
+
+        50% {
+            width: 52px;
+            height: 23px;
+            background-image: url(img/header_09.png);
+        }
+
+        100% {
+            width: 66px;
+            height: 23px;
+            background-image: url(img/header_09.png);
+        }
+    }
+
+    .li3:hover {
+        transform: rotate(90deg);
+    }
+
+    .li3 {
+        transition: transform 1s;
+    }
+</style>
+
+</html>

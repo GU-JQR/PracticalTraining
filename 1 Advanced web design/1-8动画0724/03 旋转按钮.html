@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择按钮</title>
+</head>
+
+<body>
+    <h1>顺时针旋转360度放大1.2倍</h1>
+    <ul>
+        <li><a href="#"><img src="img/delicious.png" alt=""></a></li>
+        <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+        <li><a href="#"><img src="img/rss.png" alt=""></a></li>
+        <li><a href="#"><img src="img/twitter.png" alt=""></a></li>
+        <li><a href="#"><img src="img/yahoo.png" alt=""></a></li>
+    </ul>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        float: left;
+        margin-left: 20px;
+    }
+
+    img {
+        transition: transform 1s linear;
+    }
+
+    img:hover {
+        transform: rotate(360deg) scale(1.2);
+    }
+</style>
+
+</html>

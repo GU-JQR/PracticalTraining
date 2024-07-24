@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D变形</title>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .box {
+        margin: 100px auto;
+        width: 200px;
+        height: 100px;
+        background-color: red;
+    }
+
+    /* 鼠标悬浮 产生2D变形效果
+        transform 属性变形,后面跟变形函数
+                    translate() 平移
+                    scale() 缩放函数
+                    rotate(45deg) 旋转函数
+                    skew(45deg) 倾斜函数
+    
+    */
+
+    .box:hover {
+        transform: translate(40px, 100px) scale(0.5) rotate(45deg) skew(45deg);
+    }
+</style>
+
+</html>

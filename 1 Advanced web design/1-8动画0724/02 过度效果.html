@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D变形</title>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .box {
+        margin: 100px auto;
+        width: 200px;
+        height: 100px;
+        background-color: red;
+        /* 过渡属性
+            transition:样式属性 过渡时间 延迟时间 过渡函数
+                        all             可以不写 linear
+        */
+        transition: all 2s 1s linear;
+    }
+
+    /* 鼠标悬浮 产生2D动画 但是看不到动画的过程
+
+    
+    */
+
+    .box:hover {
+        transform: translate(40px, 100px) scale(0.5) rotate(360deg) skew(45deg);
+        background-color: aqua;
+    }
+</style>
+
+</html>

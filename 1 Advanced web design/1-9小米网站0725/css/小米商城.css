@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.main_menu {
+    background-color: #333;
+    line-height: 50px;
+    height: 50px;
+}
+
+
+
+/* 内部环绕居中 */
+.box_wrap {
+    width: 1534px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+
+}
+
+.main_menu_left {
+    float: left;
+}
+
+/* 主菜单左侧文字 大小 颜色 间距 */
+.main_menu_left>.main_menu_item a {
+    font-size: 12px;
+    color: #A4B0A4;
+    padding: 0 10px;
+    border-right: 1px solid #A4B0A4;
+}
+
+.main_menu_left>.main_menu_item {
+    display: inline-block;
+}
+
+/* 去掉最后一个右边框 */
+.main_menu_left>li:last-child a {
+    border: none;
+}
+
+/* 主菜单 右浮动 */
+.main_menu_right {
+    float: right;
+}
+
+.main_menu_right li {
+    display: inline-block;
+
+}
+
+.main_menu_right li a {
+    font-size: 12px;
+    color: #A4B0A4;
+    padding: 0 7px;
+    border-right: 1px solid #A4B0A4;
+}
+
+.main_menu_right li:nth-of-type(3) a {
+    border: none;
+}
+
+.main_menu_right .shop_cart {
+    height: 47px;
+    width: 150px;
+    text-align: center;
+    font-size: 12px;
+    color: #A4B0A4;
+    background-color: #424242;
+}
+
+.main_menu_right .shop_cart:hover {
+    background-color: #fff;
+    color: red;
+}
+
+/* 主菜单超链接 悬浮文字白色 */
+.main_menu a:hover {
+    color: white;
+}
+
+.big_box {
+    border: 1px solid blue;
+}
+
+.pro_cate_nav {
+    height: 125px;
+    background: white;
+    line-height: 125px;
+    position: relative;
+}
+
+.pro_cate_nav_logo {
+    width: 125px;
+    height: 100%;
+    background: url(https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/img/logo-mi2.png) no-repeat left center;
+    background-size: 60%;
+    /* float: left; */
+}
+
+.pro_cate_nav_search {
+    /* float: right; */
+    height: 63px;
+    line-height: 63px;
+    /* background-color: blue; */
+    position: absolute;
+    right: 0;
+    top: calc(62px - 31px);
+}
+
+.pro_cate_nav_search>#pro_name {
+    float: left;
+    line-height: 63px;
+    font-size: 14px;
+    border: 1px solid #B1B1B1;
+    outline: none;
+    padding-left: 16px;
+}
+
+.pro_cate_nav_search>.search_btn {
+    float: right;
+    width: 63px;
+    line-height: 63px;
+    font-size: 14px;
+    border: 1px solid #B1B1B1;
+    text-align: center;
+}
+
+/* 鼠标悬停搜索变色 */
+.pro_cate_nav_search>.search_btn:hover {
+    background-color: #FF6A00;
+    cursor: pointer;
+    color: white;
+}
+
+/* 商品分类导航 */
+.pro_cate_nav .pro_cate_nav_list {
+    border: 1px solid red;
+    position: absolute;
+    top: 0;
+    left: 290px;
+}
+
+.pro_cate_nav .pro_cate_nav_list li {
+    display: inline-block;
+    font-size: 20px;
+    font-family: "黑体";
+    padding: 0 14px;
+    color: #333;
+    font-weight: 700;
+}
+
+.pro_cate_nav .pro_cate_nav_list li:hover {
+    color: red;
+}

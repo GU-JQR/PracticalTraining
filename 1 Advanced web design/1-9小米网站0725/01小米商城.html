@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小米商城</title>
+    <!-- 轮播插件样式,在自定义样式之前 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.js"> </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js.map"> </script>
     <link rel="stylesheet" href="css/小米商城.css">
 </head>
 
@@ -53,9 +59,80 @@
                 <span class="search_btn">a</span>
             </div>
         </div>
-    </div>
-    <!-- 分类侧边导航和轮播图 -->
+        <!-- 分类侧边导航和轮播图 -->
+        <div class="pro_middle clearfix">
+            <div class="pro_middle_catelist">
+                <li>手机</li>
+                <li>电视</li>
+                <li>家电</li>
+                <li>笔记本 平板</li>
+                <li>出行 穿戴</li>
+                <li>耳机 音响</li>
+                <li>健康 儿童</li>
+                <li>生活 箱包</li>
+                <li>智能 路由器</li>
+                <li>电源 配件</li>
+            </div>
+            <div class="pro_middle_lunbo swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e71e1b185e379286038a6f114d4fa4fe.jpg?w=2452&h=920"
+                            alt=""></div>
+                    <div class="swiper-slide"><img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2481d91110fb14bbfe2b8c07325cff97.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+                            alt=""></div>
+                    <div class="swiper-slide"><img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/efec8d3e1610d643bddb5c2524c2978a.png?w=2452&h=920"
+                            alt=""></div>
+                    <div class="swiper-slide"><img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/1484efbc954604f2fff16aa8a7447c3d.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+                            alt=""></div>
+                    <div class="swiper-slide"><img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/1e125f7e065bb9d7bc36b480a4437820.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+                            alt=""></div>
+                    <div class="swiper-slide"><img
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/72d2f359aa032bc5f6372b3022b39a92.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+                            alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
+                </div>
+            </div>
+        </div>
 
 </body>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletElement: 'li',
+            bulletClass: 'my-bullet',
+
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        on: {
+            autoplayTimeLeft(s, time, progress) {
+                progressCircle.style.setProperty("--progress", 1 - progress);
+                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+            }
+        }
+    });
+</script>
 
 </html>

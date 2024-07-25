@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度糯米</title>
+</head>
+
+<body>
+    <div class="second">
+        <div class="second2">
+            <p>购物车</p>
+        </div>
+    </div>
+
+    <div class="third"></div>
+    <div class="fourth"></div>
+    <div class="fifth"></div>
+    <div class="first"></div>
+
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    .first {
+        width: 1900px;
+        height: 2625px;
+        background: url(img/img.bmp) no-repeat;
+        /* background-size: cover; */
+        /* margin: 0 auto; */
+    }
+
+    .second {
+        width: 40px;
+        height: 40px;
+        background: url(img/toolbar_05.png) no-repeat center center;
+        background-size: 30px;
+        position: fixed;
+        right: 0;
+        top: 400px;
+        background-color: #414141;
+        border-radius: 5px;
+    }
+
+    .second2 {
+        position: fixed;
+        right: 0;
+        top: 400px;
+        display: none;
+    }
+
+    .second2 p {
+        float: left;
+        line-height: 40px;
+        height: 40px;
+        width: 60px;
+        background-color: #C84D49;
+        color: white;
+        padding-left: 30px;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .second2 div {
+        float: right;
+        width: 40px;
+        height: 40px;
+        background: url(img/toolbar_05.png) no-repeat center center;
+        background-size: 30px;
+        background-color: #B81914;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .third {
+        width: 40px;
+        height: 40px;
+        background: url(img/toolbar_10.png) no-repeat center center;
+        background-size: 30px;
+        position: fixed;
+        right: 0;
+        top: 450px;
+        border-radius: 5px;
+        background-color: #414141;
+    }
+
+    .fourth {
+        width: 40px;
+        height: 40px;
+        background: url(img/toolbar_15.png) no-repeat center center;
+        background-size: 30px;
+        position: fixed;
+        right: 0;
+        top: 500px;
+        border-radius: 5px;
+        background-color: #414141;
+    }
+
+    .fifth {
+        width: 40px;
+        height: 40px;
+        background: url(img/toolbar_19.png) no-repeat center center;
+        background-size: 30px;
+        position: fixed;
+        right: 0;
+        top: 550px;
+        border-radius: 5px;
+        background-color: #414141;
+    }
+
+    .second:hover .second2 {
+        display: inline-block;
+        animation: img1 1s linear both;
+    }
+
+    @keyframes img1 {
+        0% {
+            width: 0;
+        }
+
+        50% {
+            width: 50px;
+        }
+
+        100% {
+            width: 100px;
+        }
+    }
+</style>
+
+</html>

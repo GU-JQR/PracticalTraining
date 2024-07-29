@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdMaster</title>
+    <script src="https://cdn.staticfile.net/jquery/1.10.2/jquery.min.js">
+    </script>
+</head>
+
+<body>
+    <h1>AdMaster</h1>
+    <div class="btn"></div>
+    <ul class="nav">
+        <li>Home</li>
+        <li>solution</li>
+        <li>Market Lnsights</li>
+        <li>College</li>
+        <li>About Us</li>
+    </ul>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    h1 {
+        width: 200px;
+        margin: 50px auto;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+    }
+
+    .nav li {
+        background-color: #fff;
+        color: #333;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 10px;
+    }
+
+    .nav li:hover {
+        background-color: red;
+        color: white;
+    }
+
+    @media screen and (min-width:800px) {
+        .nav {
+            display: flex !important;
+        }
+    }
+
+    @media screen and (min-width:668px) and (max-width:799px) {
+        .nav {
+            display: flex !important;
+            justify-content: space-around;
+        }
+    }
+
+    @media screen and (max-width:667px) {
+        .nav li {
+            width: 90%;
+            margin: 5px 0;
+        }
+
+        .nav {
+            flex-wrap: wrap;
+            display: none;
+        }
+
+        .btn {
+            display: block !important;
+        }
+    }
+
+    .btn {
+        width: 40px;
+        height: 40px;
+        /* background-color: red; */
+        margin-bottom: 10px;
+        display: none;
+        background: url(img/1.png) no-repeat;
+    }
+</style>
+<script>
+    // $(document).ready(function () {
+    //     $(".btn").click(function () {
+    //         $(".nav").toggle();
+    //     })
+    // });
+    $(document).ready(function () {
+        $(".btn").click(function () {
+            $(".nav").toggle();
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询语法</title>
+    <link rel="stylesheet" href="css/媒体查询.css" media="screen and (max-width:449px)">
+</head>
+
+<body>
+
+</body>
+<!-- 根据屏幕宽度   响应
+    屏幕宽度大于1000时候 背景色变成绿色
+    使用媒体查询 @media 媒体类型 and(条件:值){css样式表}
+    768<屏幕<1000 背景色紫色
+    450<屏幕<768 背景色粉色
+    小于450 背景色 背景色金色
+    使用媒体查询 @media 媒体类型 and(条件:值){css样式表}
+    -->
+<style>
+    @media screen and (min-width:1000px) {
+        body {
+            background-color: greenyellow;
+        }
+    }
+
+    @media screen and (min-width:768px) and (max-width:999px) {
+        body {
+            background-color: purple;
+        }
+    }
+
+    @media screen and (min-width:450px) and (max-width: 767px) {
+        body {
+            background-color: pink;
+        }
+    }
+
+    /* @media screen and (max-width:449px) {
+        body {
+            background-color: goldenrod;
+        }
+    } */
+</style>
+
+</html>

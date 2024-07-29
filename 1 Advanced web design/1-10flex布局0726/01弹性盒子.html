@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性盒子</title>
+</head>
+<!-- 一个盒子设置display:flex 之后 弹性盒子,里面才能使用flex相关属性
+                项目:弹性盒子里面的元素 称为item(项目)
+                主轴方向:默认从左到右
+                交叉轴方向:默认从上到下
+-->
+
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+</body>
+<style>
+    .box {
+        display: flex;
+        border: 1px solid blue;
+        height: 200px;
+        width: 800px;
+    }
+
+    .item {
+        border: 1px solid red;
+        width: 200px;
+        height: 100px;
+    }
+</style>
+
+</html>

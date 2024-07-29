@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对齐方式</title>
+</head>
+<!-- 一个盒子设置display:flex 之后 弹性盒子,里面才能使用flex相关属性
+                项目:弹性盒子里面的元素 称为item(项目)
+                主轴方向:默认从左到右
+                交叉轴方向:默认从上到下
+            容器属性:
+                1.容器方向 flex-direction: row|row-reverse column|column-reverse
+                2.justify-content: flex-start | flex-end | center | space-between | space-around;
+                    flex-start（默认值）：左对齐
+                    flex-end：右对齐
+                    center： 居中
+                    space-between：两端对齐，项目之间的间隔都相等。
+                    space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+-->
+
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+</body>
+<style>
+    .box {
+        display: flex;
+        border: 1px solid blue;
+        height: 700px;
+        width: 800px;
+        margin: 0 auto;
+        /* 主轴方向 */
+        flex-direction: row;
+        /* 项目在主轴对齐方式 */
+        justify-content: space-between;
+    }
+
+    .item {
+        border: 1px solid red;
+        width: 50px;
+        height: 50px;
+    }
+</style>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目属性</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+</body>
+<!-- 项目属性:对弹性容器中item设置的属性
+                    1.flex-grow: <number>;
+                            flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+                            
+-->
+<style>
+    .box {
+        width: 500px;
+        height: 300px;
+        border: 2px solid #aaa;
+        margin: 0 auto;
+        display: flex;
+        /* 主轴方向 */
+        flex-direction: row;
+        /* justify-content: space-between; */
+        /* 交叉轴对齐方式 */
+        align-items: flex-start;
+    }
+
+    .item1 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+    }
+
+    .item2 {
+        height: 100px;
+        border: 1px solid red;
+        flex-grow: 1;
+    }
+
+    .item3 {
+        height: 100px;
+        border: 1px solid blue;
+        background-color: blue;
+        flex-grow: 1;
+    }
+</style>
+
+</html>

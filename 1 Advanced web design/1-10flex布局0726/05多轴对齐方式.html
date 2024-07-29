@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多轴对齐</title>
+</head>
+<!-- 一个盒子设置display:flex 之后 弹性盒子,里面才能使用flex相关属性
+                项目:弹性盒子里面的元素 称为item(项目)
+                主轴方向:默认从左到右
+                交叉轴方向:默认从上到下
+            容器属性:
+                1.容器方向 flex-direction: row|row-reverse column|column-reverse
+                2.justify-content: flex-start | flex-end | center | space-between | space-around;
+                    flex-start（默认值）：左对齐
+                    flex-end：右对齐
+                    center： 居中
+                    space-between：两端对齐，项目之间的间隔都相等。
+                    space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+                3.align-items: flex-start | flex-end | center | baseline | stretch;
+                    flex-start：交叉轴的起点对齐。
+                    flex-end：交叉轴的终点对齐。
+                    center：交叉轴的中点对齐。
+                    baseline: 项目的第一行文字的基线对齐。
+                    stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+                4.flex-wrap: nowrap | wrap | wrap-reverse;设置项目是否多轴,否则项目在一条轴线
+                    设置多轴之后 项目在主轴方向对齐属性仍然是justify-content
+                    多轴的侧轴方向
+                5.align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+                6.flex-flow: <flex-direction> <flex-wrap>;
+                    flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+-->
+
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+</body>
+<style>
+    .box {
+        display: flex;
+        border: 1px solid blue;
+        height: 700px;
+        width: 800px;
+        margin: 0 auto;
+        /* 主轴方向 */
+        flex-direction: row;
+        /* 项目在主轴对齐方式 */
+        justify-content: space-between;
+        /* 项目在交叉轴对齐方式 */
+        align-items: flex-start;
+        flex-wrap: wrap;
+        /* 设置多轴之后 项目在主轴方向对齐属性仍然是justify-content */
+        align-content: flex-start;
+        /* flex-flow: row wrap; */
+    }
+
+    .item {
+        border: 1px solid red;
+        width: 18%;
+        height: 50px;
+        box-sizing: border-box;
+    }
+</style>
+
+</html>

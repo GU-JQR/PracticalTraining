@@ -19,6 +19,79 @@
         <li>College</li>
         <li>About Us</li>
     </ul>
+    <div class="main">
+        <img src="img/pic01.jpg" alt="" class="back_img">
+        <div class="setting">
+            <div>
+                <img src="img/2.jpg" alt="">
+                <h2>Ipsum consequat</h2>
+                <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+            </div>
+            <div>
+                <img src="img/3.jpg" alt="">
+                <h2>Magna etiam dolor</h2>
+                <p>Provides Servers and network connectivity.</p>
+            </div>
+            <div>
+                <img src="img/4.jpg" alt="">
+                <h2>Tempus adipiscing</h2>
+                <p>Payment gateway to collect veroeros sed blandit consequat money.</p>
+            </div>
+        </div>
+        <div class="more">
+            <div>Get Started</div>
+            <div>Learn More</div>
+        </div>
+        <h2 class="Portfolio">My Portfolio</h2>
+        <div class="find">
+            <div>
+                <img src="img/pic02.jpg" alt="">
+                <h3>Ipsum feugiat et dolor</h3>
+                <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing
+                    et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+                <div class="out">Find out more</div>
+            </div>
+            <div>
+                <img src="img/pic03.jpg" alt="">
+                <h3>Sed etiam lorem nulla</h3>
+                <p>Start your own cloud hosting business in minutes Simple interface fully equipped with all what you
+                    need Compete with Digital Ocean and other cloud giants...</p>
+                <div class="out">Find out more</div>
+            </div>
+            <div>
+                <img src="img/pic04.jpg" alt="">
+                <h3>Consequat et tempus</h3>
+                <p>Sell your cloud management pane new IaaS cloud hosting veroeros cloud management pane sed amet
+                    blandit consequat veroeros lorem blandit SaaS cloud management panel.</p>
+                <div class="out">Find out more</div>
+            </div>
+            <div>
+                <img src="img/pic05.jpg" alt="">
+                <h3>Blandit sed adipiscing</h3>
+                <p>Register a totally free account with all features enabled. or choose one of the available pre-paid
+                    packages...</p>
+                <div class="out">Find out more</div>
+            </div>
+            <div>
+                <img src="img/pic06.jpg" alt="">
+                <h3>Etiam nisl consequat</h3>
+                <p>Install Sadeem agent on your servers using our automated installation script, its only one Line which
+                    you need to run.</p>
+                <div class="out">Find out more</div>
+            </div>
+            <div>
+                <img src="img/pic07.jpg" alt="">
+                <h3>Dolore nisl feugiat</h3>
+                <p>Create your service offer packages and set the prices of extra bandwidth usage, you can also create
+                    coupons to help you ...</p>
+                <div class="out">Find out more</div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        Copyright ? 2018.Company name All rights reserved.
+    </div>
+
 </body>
 <style>
     * {
@@ -85,18 +158,160 @@
     .btn {
         width: 40px;
         height: 40px;
-        /* background-color: red; */
         margin-bottom: 10px;
         display: none;
         background: url(img/1.png) no-repeat;
     }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back_img {
+        /* height: 444px; */
+        width: 70%;
+        margin: 20px 0;
+    }
+
+    .setting {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .setting>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        margin: 0 20px;
+    }
+
+    .setting>div img,
+    .setting>div h2 {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (max-width:667px) {
+        .setting {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .setting>div {
+            width: 70%;
+        }
+    }
+
+    .more {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .more>div {
+        width: 200px;
+        margin: 0 20px;
+        background-color: #252122;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    @media screen and (min-width:668px) and (max-width:799px) {
+        .more {
+            justify-content: space-around;
+        }
+    }
+
+    @media screen and (max-width:667px) {
+        .more {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .more>div {
+            margin: 10px 0;
+        }
+    }
+
+    .Portfolio {
+        padding: 40px 0;
+    }
+
+    .find {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(2, 1fr); */
+        width: 100%;
+    }
+
+    .find>div {
+        width: 330px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+    }
+
+    .find>div img {
+        width: 300px;
+    }
+
+    .find>div p {
+        width: 280px;
+        height: 130px;
+    }
+
+    .find>div h3 {
+        width: 240px;
+        padding: 5px 0;
+    }
+
+    .find .out {
+        width: 150px;
+        margin: 0 20px;
+        background-color: #252122;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width:668px) and (max-width:799px) {
+        .find {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width:668px) {
+        .find {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .foot {
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        background-color: #252122;
+        color: white;
+        align-items: center;
+    }
 </style>
 <script>
-    // $(document).ready(function () {
-    //     $(".btn").click(function () {
-    //         $(".nav").toggle();
-    //     })
-    // });
     $(document).ready(function () {
         $(".btn").click(function () {
             $(".nav").toggle();

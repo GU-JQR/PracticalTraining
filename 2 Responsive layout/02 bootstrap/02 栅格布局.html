@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>栅格布局</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- 设置第一行 中等屏幕 3个一行 小屏幕2个一行 超小屏幕一个一行 大屏幕6个一行 -->
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12 col-lg-2">test</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 col-lg-2">test</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 col-lg-2">test</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 col-lg-2">test</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 col-lg-2">test</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 col-lg-2">test</div>
+        </div>
+        <h1>列偏移</h1>
+        <div class="row">
+            <div class="col-md-4">test</div>
+            <div class="col-md-4 col-md-offset-4">test</div>
+        </div>
+        <h1>列嵌套</h1>
+        <div class="row">
+            <div class="col-md-8">8
+                <div class="row">
+                    <div class="col-md-6" style="height: 50px;">6</div>
+                    <div class="col-md-6" style="height: 50px;">6</div>
+                </div>
+            </div>
+            <div class="col-md-4">4</div>
+        </div>
+        <h1>列排序</h1>
+        <div class="row">
+            <div class="col-md-9 col-md-push-3">9</div>
+            <div class="col-md-3 col-md-pull-9">3</div>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+    }
+
+    .row div {
+        border: 1px solid red;
+    }
+</style>
+<!-- 引入jquery -->
+<script src="js/jquery-1.12.4.js"></script>
+<!-- 引入bootstrap js -->
+<script src="js/bootstrap.js"></script>
+
+</html>

@@ -9,8 +9,15 @@
 </head>
 
 <body>
-    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
+
+            <button class="navbar-btn navbar-right navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <li class="icon-bar"></li>
+                <li class="icon-bar"></li>
+                <li class="icon-bar"></li>
+                <li class="icon-bar"></li>
+            </button>
             <div class="navbar-header">
                 <a href="#" class="navbar-brand">
                     <img class="img-responsive img-circle"
@@ -18,7 +25,7 @@
                 </a>
             </div>
             <!-- 导航条里面放入菜单 通过navbar-nav -->
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-collapse">
                 <li class="active"><a href="#">首页</a></li>
                 <li><a href="#">商城</a></li>
                 <li><a href="#">论坛</a></li>
@@ -27,9 +34,9 @@
             <!-- 导航条中的按钮 文本 链接 
             navbar-left | right 对齐方式
             -->
-            <button class="btn btn-primary navbar-btn navbar-left">按钮</button>
-            <p class="navbar-text">文本</p>
-            <p class="navbar-text"><a href="#" class="navbar-link">链接</a></p>
+            <button id="b1" class="btn btn-primary navbar-btn navbar-left">按钮</button>
+            <p id="p1" class="navbar-text">文本</p>
+            <p id="p2" class="navbar-text"><a href="#" class="navbar-link">链接</a></p>
 
             <!-- 导航条中的表单 -->
             <form action="#" class="navbar-form navbar-right">
@@ -47,12 +54,30 @@
     </div>
 </body>
 <style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+
     .navbar-brand {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 60px;
         margin-left: 20px;
+    }
+
+    /* 当屏幕小于768像素，隐藏 独立按钮 文本 链接 表单 */
+    @media screen and (max-width:768px) {
+
+        #b1,
+        #p1,
+        #p2,
+        form {
+            display: none;
+        }
     }
 </style>
 <!-- 引入jquery -->

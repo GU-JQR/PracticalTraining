@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap基本样式</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <!-- 标签页 -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">1</a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+    </ul>
+    <hr>
+    <!-- 胶囊式导航 -->
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#">1</a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+    </ul>
+    <hr>
+    <!-- 响应式导航（可伸缩） -->
+    <ul class="nav nav-justified">
+        <li class="active"><a href="#">1</a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+    </ul>
+    <!-- 导航+下拉菜单 -->
+    <hr>
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#">1</a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+        <li class="dropdown">
+            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                DropDown
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="active"><a href="#">鸿蒙开发</a></li>
+                <li class="divider"></li>
+                <li><a href="#">devops</a></li>
+                <li><a href="#">GO</a></li>
+                <li><a href="#">Linux</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<!-- 引入jquery -->
+<script src="js/jquery-1.12.4.js"></script>
+<!-- 引入bootstrap js -->
+<script src="js/bootstrap.js"></script>
+
+</html>

@@ -28,9 +28,9 @@
                 <li><a href="#">岗位课</a></li>
                 <li><a href="#">技能库</a></li>
                 <li><a href="#">微社区</a></li>
-                <li class="nav-item-inline">
+                <li id="l1">
                     <a href="#">学员</a>
-                    <!-- <button class="btn btn-danger" type="submit">new</button> -->
+                    <button class="btn btn-danger btn-xs" type="submit">new</button>
                 </li>
             </ul>
             <form class="navbar-form navbar-right" action="#">
@@ -41,10 +41,7 @@
                     </span>
                 </div>
             </form>
-            <p class="navbar-text navbar-right">注册</p>
-            <p class="navbar-text navbar-right">登录</p>
-            <div class="navbar-header navbar-right hidden-lg hidden-md hidden-sm">
-                <!-- 隐藏在大中小屏幕，显示在超小屏幕 -->
+            <div id="p1" class="navbar-right">
                 <p class="navbar-text">登录</p>
                 <p class="navbar-text">注册</p>
             </div>
@@ -67,22 +64,22 @@
         margin-left: 40px;
     }
 
-    @media screen and (max-width:940px) {
+    @media screen and (max-width:1000px) {
         form {
             display: none;
         }
     }
 
     @media screen and (max-width: 768px) {
-        .navbar-header .navbar-text {
-            display: inline-block;
+        #p1 {
+            display: none;
         }
     }
 
-    .nav-item-inline {
-        /* display: flex; */
-        /* align-items: center; */
-        /* width: 150px; */
+    #l1 {
+        width: 100px;
+        display: flex;
+        align-items: center;
     }
 </style>
 <!-- 引入jquery -->

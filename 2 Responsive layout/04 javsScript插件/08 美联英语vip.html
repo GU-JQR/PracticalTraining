@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap基本样式</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <i class="glyphicon glyphicon-phone-alt"></i>
+                    <span>400-777-8828</span>
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">中文</a></li>
+                <li><a href="#">英文</a></li>
+            </ul>
+            <form action="#" class="navbar navbar-form navbar-right">
+                <button type="submit" class="btn btn-danger">立即注册</button>
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">登录</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="mymodal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times; </button>
+                    <h3 class="modal-title">欢迎登录 SIGN UP</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="user" id="user" placeholder="手机/邮箱/用户名">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="pass" id="pass" placeholder="密码">
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox">
+                            <span>下次自动登录</span>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger form-control">登录</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="myback"></div>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .myback {
+        height: 768px;
+        background: url(img/img2.jpg) no-repeat;
+    }
+</style>
+<!-- 引入jquery -->
+<script src="js/jquery-1.12.4.js"></script>
+<!-- 引入bootstrap js -->
+<script src="js/bootstrap.js"></script>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap基本样式</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <!-- 点击按钮 -->
+    <div class="container text-center">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#mymodal">登录</button>
+    </div>
+    <!-- 模态框容器
+        fade 隐藏
+        modal-header 模态框头部
+        modal-body 模态框主体
+        modal-footer 模态框底部
+    -->
+    <div class="modal fade " id="mymodal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- 关闭按钮 -->
+                    <button type="button" class="close" data-dismiss="modal">&times; </button>
+                    <!-- 标签 -->
+                    <h4 class="modal-title">百度登录</h4>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="text" name="user" id="user" placeholder="输入百度账户" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="pass" id="pass" placeholder="输入百度密码" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary form-control">登录</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+/* 
+    body {
+        position: relative;
+    } */
+
+    #mymodel {
+        position: absolute;
+        left: 0;
+    }
+</style>
+<!-- 引入jquery -->
+<script src="js/jquery-1.12.4.js"></script>
+<!-- 引入bootstrap js -->
+<script src="js/bootstrap.js"></script>
+<script>
+    $('#mymodal').modal("show");
+</script>
+
+</html>

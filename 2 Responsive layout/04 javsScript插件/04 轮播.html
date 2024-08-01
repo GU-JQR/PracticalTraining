@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap基本样式</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <!-- 滑动 -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="img/ylimg1.jpg" alt="...">
+                </div>
+                <div class="item">
+                    <img src="img/ylimg2.jpg" alt="...">
+                    <div class="carousel-caption">
+                        <h2>我的小尼克课堂</h2>
+                        <p>来自美国的11项儿童能力培养方案，看中英文动画</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 小圆点 -->
+            <ol class="carousel-indicators">
+                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mycarousel" data-slide-to="1"></li>
+            </ol>
+            <!-- 箭头 -->
+            <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+<!-- 引入jquery -->
+<script src="js/jquery-1.12.4.js"></script>
+<!-- 引入bootstrap js -->
+<script src="js/bootstrap.js"></script>
+
+</html>

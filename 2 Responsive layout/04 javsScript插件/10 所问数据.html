@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap基本样式</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li id="logo"><a href="#">所问数据</a></li>
+            </ul>
+            <div class="selector">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#name1">产品方案</a></li>
+                    <li><a href="#name2">解决方式</a></li>
+                    <li><a href="#name3">关于我们</a></li>
+                    <li><a href="#name4">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="height: 4800px; overflow: auto; margin-top: 50px;">
+        <div class="d1"></div>
+        <div class="d2" id="name1"></div>
+        <div class="d3" id="name2"></div>
+        <div class="d4" id="name3"></div>
+        <div class="d5" id="name4"></div>
+    </div>
+</body>
+<style>
+    #logo a {
+        color: #FCCF36;
+    }
+
+    .d1 {
+        background: url(img/b5.bmp) no-repeat;
+        height: 700px;
+        background-size: cover;
+    }
+
+    .d2 {
+        background: url(img/b1.bmp) no-repeat;
+        height: 700px;
+        background-size: cover;
+    }
+
+    .d3 {
+        background: url(img/b2.bmp) no-repeat;
+        height: 1400px;
+        background-size: cover;
+    }
+
+    .d4 {
+        background: url(img/b3.bmp) no-repeat;
+        height: 1000px;
+        background-size: cover;
+    }
+
+    .d5 {
+        background: url(img/b4.bmp) no-repeat;
+        height: 700px;
+        background-size: cover;
+    }
+</style>
+<!-- 引入jquery -->
+<script src="js/jquery-1.12.4.js"></script>
+<!-- 引入bootstrap js -->
+<script src="js/bootstrap.js"></script>
+
+</html>

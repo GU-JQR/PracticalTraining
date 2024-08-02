@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微票儿电影</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <!-- 居中 -->
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#">
+                        <img alt="Brand" src="img/logoMsg.png">
+                    </a>
+                    <!-- 按钮 四个横线collape 开始不显示的 -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- 对应收缩collapse列表 -->
+                <div class="navbar-collape collapse " style="margin-top: 10px;">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">全国</a></li>
+                        <li class="dropdown-menu">
+                            <div class="btn-group">
+                                <a href="#" class="myBtn dropdown-toggle" data-toggle="dropdown">
+                                    演出
+                                    <span class="caret"></span>
+                                </a>
+                                <ul id="mydropdown" class="dropdown-menu">
+                                    <li class="active"><a href="#">演出票</a></li>
+                                    <li><a href="#">场馆</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">电影</a></li>
+                        <li><a href="#">我的微票儿 <span class="label label-danger">new</span></a></li>
+                    </ul>
+                </div>
+                <!-- 登录注册 -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        <img src="img/f_wpr_h.png" alt="">
+                        <br>
+                        微信电影演出票官网
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="col-md-10 col-md-offset-1 myMP">
+                            <input type="text" class="form-control" placeholder="手机/邮箱/用户名">
+                        </div>
+                        <div class="col-md-10 col-md-offset-1 myMP">
+                            <input type="password" class="form-control" placeholder="密码">
+                        </div>
+                        <div class="col-md-10 col-md-offset-1 myMP">
+                            <input type="checkbox">下次自动登录
+                        </div>
+                        <div class="col-md-10 mB">
+                            <button class="btn btn-primary form-control">登录</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    @media screen and (max-width:768px) {
+        .myBtn {
+            position: relative;
+            top: 0;
+            right: -14px;
+        }
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .clear:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .myBtn {
+        position: relative;
+        top: 14px;
+    }
+
+    #body a {
+        color: #fff;
+    }
+
+    #body a:hover {
+        color: #2ed2c1;
+    }
+
+    .myMP {
+        margin: 20px;
+    }
+</style>
+<!-- 引入jquery -->
+<script src="js/jquery-1.12.4.js"></script>
+<!-- 引入bootstrap js -->
+<script src="js/bootstrap.js"></script>
+
+</html>

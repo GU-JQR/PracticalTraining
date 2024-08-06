@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 大盒子设置
+    设置弹性盒子 主轴 y
+*/
+.box {
+    background-color: yellow;
+    width: 100vw;
+    height: 100vh;
+}
+
+.top {
+    height: 100px;
+    background-color: purple;
+}
+
+.top .search_box {
+    height: 3.375rem;
+    background-color: red;
+
+}
+
+.search_box>.search_option {
+    width: 3.375rem;
+    height: 100%;
+    border: 1px solid blue;
+}
+
+.icon-liebiao2 {
+    color: white;
+    font-size: 1.375rem;
+    font-weight: 700;
+}
+
+/* 中间商品列表 middle 自动伸长 */
+.middle {
+    background-color: green;
+    flex: 1;
+
+}
+
+.bottom {
+    height: 200px;
+    background-color: pink;
+}
+
+/* 提前设置好弹性盒子样式 */
+.flex {
+    display: flex;
+}
+
+.f-d {
+    flex-direction: column;
+}
+
+.j-s {
+    justify-content: space-between;
+}
+
+.j-a {
+    justify-content: space-around;
+}
+
+.j-c {
+    justify-content: center;
+}
+
+.a-c {
+    align-items: center;
+}

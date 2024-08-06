@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JD移动首页</title>
+    <!-- 轮播插件样式,在自定义样式之前 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.js"> </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js.map"> </script>
     <link rel="stylesheet" href="css/jd移动首页.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4644476_r51cpy3wrnh.css">
 </head>
@@ -17,26 +23,105 @@
                 <div class="search_option flex j-c a-c">
                     <i class="iconfont icon-liebiao2"></i>
                 </div>
-                <div class="search_container"></div>
-                <div class="search_login"></div>
+                <div class="search_container flex a-c">
+                    <div class="search_container_logo flex j-c a-c">
+                        <i class="iconfont icon-jingdong"></i>
+                    </div>
+                    <div class="search_container_fangdajing flex j-c a-c">
+                        <i class="icon-fangdajing iconfont"></i>
+                    </div>
+                    <input type="text" name="proname" placeholder="欧米茄">
+                </div>
+                <div class="search_login flex j-c a-c">
+                    登录
+                </div>
             </div>
-            <!-- 轮播 -->
-            <!-- 分类列表 -->
-
+            <div class="top_bottom">
+                <!-- 轮播 -->
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://m15.360buyimg.com/mobilecms/jfs/t1/117817/29/35620/129521/6458e11cFaf8d9483/f9c9ef15220878a9.jpg!cr_1053x420_4_0!q70.jpg"
+                                alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://m15.360buyimg.com/mobilecms/jfs/t1/126927/17/33906/63048/64748baaF13ffab17/7facfcd06f854013.jpg!cr_1053x420_4_0!q70.jpg"
+                                alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://imgcps.jd.com/img-cubic/creative_server_cia_jdcloud/v2/2000268/69966296738/FocusFullshop/CkRqZnMvdDEvMTQ2MjE1LzMwLzM3OTc3LzEzMTc4NC82NDg4YzQwOUZlOTQzOGFiZS9lNmEwOTdlYzc2MGEwYTgwLnBuZxILNDY5LWpqXzBfMjQwAjiMi3pCEAoM6JGj6YWS55m96YWSEAFCEwoP5LyY5oOg5Lqr5LiN5YGcEAJCEAoM56uL5Y2z5oqi6LStEAZCCgoG57K-6YCJEAdYou3D0oQC/cr_1125x449_0_166/s/q70.jpg"
+                                alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://m15.360buyimg.com/mobilecms/jfs/t1/117817/29/35620/129521/6458e11cFaf8d9483/f9c9ef15220878a9.jpg!cr_1053x420_4_0!q70.jpg"
+                                alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://m15.360buyimg.com/mobilecms/jfs/t1/126927/17/33906/63048/64748baaF13ffab17/7facfcd06f854013.jpg!cr_1053x420_4_0!q70.jpg"
+                                alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://imgcps.jd.com/img-cubic/creative_server_cia_jdcloud/v2/2000268/69966296738/FocusFullshop/CkRqZnMvdDEvMTQ2MjE1LzMwLzM3OTc3LzEzMTc4NC82NDg4YzQwOUZlOTQzOGFiZS9lNmEwOTdlYzc2MGEwYTgwLnBuZxILNDY5LWpqXzBfMjQwAjiMi3pCEAoM6JGj6YWS55m96YWSEAFCEwoP5LyY5oOg5Lqr5LiN5YGcEAJCEAoM56uL5Y2z5oqi6LStEAZCCgoG57K-6YCJEAdYou3D0oQC/cr_1125x449_0_166/s/q70.jpg"
+                                alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://m15.360buyimg.com/mobilecms/jfs/t1/117817/29/35620/129521/6458e11cFaf8d9483/f9c9ef15220878a9.jpg!cr_1053x420_4_0!q70.jpg"
+                                alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://m15.360buyimg.com/mobilecms/jfs/t1/126927/17/33906/63048/64748baaF13ffab17/7facfcd06f854013.jpg!cr_1053x420_4_0!q70.jpg"
+                                alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://imgcps.jd.com/img-cubic/creative_server_cia_jdcloud/v2/2000268/69966296738/FocusFullshop/CkRqZnMvdDEvMTQ2MjE1LzMwLzM3OTc3LzEzMTc4NC82NDg4YzQwOUZlOTQzOGFiZS9lNmEwOTdlYzc2MGEwYTgwLnBuZxILNDY5LWpqXzBfMjQwAjiMi3pCEAoM6JGj6YWS55m96YWSEAFCEwoP5LyY5oOg5Lqr5LiN5YGcEAJCEAoM56uL5Y2z5oqi6LStEAZCCgoG57K-6YCJEAdYou3D0oQC/cr_1125x449_0_166/s/q70.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- 分类 -->
+                <div class="flex classify">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="middle">
+                <!-- 商品列表 -->
+            </div>
+            <div class="bottom">
+                <!-- tabbar导航 -->
+            </div>
         </div>
-        <div class="middle">
-            <!-- 商品列表 -->
-        </div>
-        <div class="bottom">
-            <!-- tabbar导航 -->
-
-        </div>
-    </div>
 </body>
 <script>
     //设置等比例像素切换 (通过脚本获取当前手机的屏幕宽度/设计稿图片宽度)
     //配置好之后所有的尺寸单位改为rem单位  （按照根元素的比例进行设置）
     document.documentElement.style.fontSize = (document.documentElement.clientWidth / 470) * 16 + "px";
+</script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
 </script>
 
 </html>

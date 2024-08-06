@@ -51,15 +51,15 @@ a {
 
 .search_container {
     flex: 1;
-    height: 40px;
+    height: 2.5rem;
     background-color: #f7f7f7;
     border-radius: 1.25rem;
 }
 
 .search_container_logo {
-    width: 50px;
+    width: 3.125rem;
     /* border: .0625rem solid blue; */
-    height: 100px;
+    height: 6.25rem;
 
 }
 
@@ -76,7 +76,7 @@ a {
 }
 
 .icon-jingdong {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #EA4A4C;
 }
@@ -89,7 +89,7 @@ a {
 
 .swiper-slide {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.125rem;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -146,8 +146,8 @@ a {
 }
 
 .middle h2 {
-    width: 200px;
-    height: 90px;
+    width: 12.5rem;
+    height: 5.625rem;
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 400;
@@ -156,14 +156,14 @@ a {
 .middle h3 {
     font-weight: 400;
     color: #FF4142;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 
 .top_bottom {
     /* height: 23.5625rem; */
     background-color: #f7f7f7;
-    padding: 0 18px;
+    padding: 0 1.125rem;
 }
 
 .bottom {

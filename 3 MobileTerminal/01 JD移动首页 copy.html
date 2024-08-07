@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD移动首页</title>
+    <!-- 轮播插件样式,在自定义样式之前 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.js"> </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js.map"> </script>
+    <link rel="stylesheet" href="css/jd移动首页.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4644476_r51cpy3wrnh.css">
+</head>
+
+<body>
+    <div class="box flex f-d">
+        <div class="top">
+            <!-- 搜索条 -->
+            <div class="search_box flex j-s a-c">
+
+            </div>
+            <div class="top_bottom">
+                <!-- 轮播 -->
+
+            </div>
+            <div class="middle flex ">
+
+            </div>
+            <div class="bottom">
+                <!-- tabbar导航 -->
+            </div>
+        </div>
+</body>
+<script>
+    //设置等比例像素切换 (通过脚本获取当前手机的屏幕宽度/设计稿图片宽度)
+    //配置好之后所有的尺寸单位改为rem单位  （按照根元素的比例进行设置）
+    document.documentElement.style.fontSize = (document.documentElement.clientWidth / 430) * 16 + "px";
+</script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+</html>

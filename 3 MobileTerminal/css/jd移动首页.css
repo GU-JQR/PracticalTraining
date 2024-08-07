@@ -20,11 +20,15 @@ a {
 .top {
     /* height: 100px; */
     background-color: purple;
+
 }
 
 .top .search_box {
     height: 3.375rem;
     background-color: red;
+    position: sticky;
+    top: 0;
+    z-index: 9;
 
 }
 
@@ -131,33 +135,67 @@ a {
 
 /* 中间商品列表 middle 自动伸长 */
 .middle {
-    background-color: yellowgreen;
+    background-color: #fff;
     flex: 1;
 
 }
 
-.middle>div {
-    width: 45%;
-
-}
-
-.middle img {
-    width: 100%;
-}
-
-.middle h2 {
-    width: 12.5rem;
-    height: 5.625rem;
+.middle .productlist {
     overflow: hidden;
-    text-overflow: ellipsis;
-    font-weight: 400;
+    column-count: 2;
 }
 
-.middle h3 {
-    font-weight: 400;
-    color: #FF4142;
-    font-size: 1.25rem;
+.middle .productlist>.product_item {
+    box-sizing: border-box;
+    width: 98%;
 }
+
+.middle .product_item .img {
+    width: 100%;
+    text-align: center;
+}
+
+.middle .product_item .img img {
+    width: 90%;
+}
+
+.middle .product_item .content {
+    padding: 0 .75rem;
+}
+
+.middle .product_item .content .title {
+    font-size: 1.25rem;
+    color: #505050;
+    font-weight: 700;
+    margin: 1.125rem 0;
+}
+
+.middle .product_item .content .price {
+    font-size: .5625rem;
+    color: #EA4A4C;
+
+}
+
+.middle .product_item .content .price span {
+    font-size: 1.125rem;
+}
+
+.middle .product_item .content .desc {
+    padding: 1.25rem 0rem .9375rem 0;
+    font-size: .75rem;
+    color: #b4b8bb;
+}
+
+.middle .product_item .content .simple {
+    background-color: #F2F2F2;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    width: 3.75rem;
+    border-radius: .75rem;
+}
+
+
 
 
 .top_bottom {
@@ -167,7 +205,7 @@ a {
 }
 
 .bottom {
-    height: 200px;
+    height: 3.75rem;
     background-color: pink;
 }
 

@@ -17,8 +17,8 @@ header p {
 
 /* 表单 */
 section {
-    height: 400px;
-    background-color: pink;
+    height: 18.75rem;
+    /* background-color: pink; */
     padding: 2.5rem 1.25rem;
 }
 
@@ -29,6 +29,7 @@ section {
     background-color: #fff;
     border-bottom: 2px solid #F2F2F2;
     padding-left: .625rem;
+    margin: 1.25rem 0;
 }
 
 .form-first select {
@@ -52,6 +53,8 @@ section {
 }
 
 .form-second button {
+    margin-top: .625rem;
+    padding-left: 2.1875rem;
     font-size: 1rem;
     outline: none;
     border: none;
@@ -59,10 +62,92 @@ section {
     color: #909294;
     border-left: 1px solid #909294;
     height: 2rem;
+
+}
+
+.submit {
+    outline: none;
+    border: none;
+    background-color: #FFBCB3;
+    height: 3.125rem;
+    width: 100%;
+    border-radius: 1.5625rem;
+    color: #FFFEFE;
+    font-size: 20px;
+    margin-top: 1.25rem;
+}
+
+.login {
+    margin: 1.875rem 0;
+    color: #909294;
 }
 
 /* 底部 */
 footer {
     height: 200px;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
+    padding: 0 1.25rem;
+}
+
+footer .other {
+    text-align: center;
+    color: #909294;
+    margin-bottom: 1.875rem;
+}
+
+footer .logo>div {
+    height: 3.125rem;
+    width: 3.125rem;
+    border-radius: 1.5625rem;
+    line-height: 3.125rem;
+    text-align: center;
+}
+
+footer .logo>div:nth-of-type(1) {
+    background-color: #E7F7FE;
+
+}
+
+footer .logo>div:nth-of-type(2) {
+    background-color: #E6F8E6;
+
+}
+
+footer .logo>div:nth-of-type(3) {
+    background-color: #000000;
+
+}
+
+footer .logo>div i {
+    font-size: 2rem;
+}
+
+.icon-qq {
+    color: #12B7F5;
+}
+
+.icon-weixin {
+    color: #09BB07;
+}
+
+.icon-apple {
+    color: #fff;
+}
+
+.xieyi {
+    align-items: flex-start;
+    margin-top: 1.875rem;
+}
+
+.xieyi input {
+    margin-right: .3125rem;
+}
+
+.xieyi p {
+    font-size: .875rem;
+    color: #909294;
+}
+
+.xieyi p span {
+    color: #5394E2;
 }

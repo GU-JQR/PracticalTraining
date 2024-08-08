@@ -1,0 +1,68 @@
+/* 顶部导航 */
+header {
+    height: 3.125rem;
+    line-height: 3.125rem;
+}
+
+.icon-xiangzuo1 {
+    font-size: 1.5625rem;
+    margin: 0 .625rem;
+
+}
+
+header p {
+    font-size: 1.25rem;
+    margin-left: 5.625rem;
+}
+
+/* 表单 */
+section {
+    height: 400px;
+    background-color: pink;
+    padding: 2.5rem 1.25rem;
+}
+
+.form-first,
+.form-second {
+    height: 3.125rem;
+    line-height: 3.125rem;
+    background-color: #fff;
+    border-bottom: 2px solid #F2F2F2;
+    padding-left: .625rem;
+}
+
+.form-first select {
+    font-size: 1rem;
+    outline: none;
+    border: none;
+}
+
+.form-first input {
+    width: 17.5rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    margin-left: .3125rem;
+}
+
+.form-second input {
+    font-size: 1rem;
+    outline: none;
+    border: none;
+}
+
+.form-second button {
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    color: #909294;
+    border-left: 1px solid #909294;
+    height: 2rem;
+}
+
+/* 底部 */
+footer {
+    height: 200px;
+    background-color: greenyellow;
+}

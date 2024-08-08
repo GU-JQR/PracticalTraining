@@ -7,29 +7,46 @@
     <title>京JD分类页</title>
     <!-- 引入axios -->
     <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.5.0/axios.js"></script>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4644476_uqmnju1jc0m.css">
     <link rel="stylesheet" href="css/jd分类页.css">
     <link rel="stylesheet" href="css/common.css">
 </head>
 
 <body>
     <div class="box flex f-d j-s">
-        <header></header>
+        <header class="flex a-c">
+            <i class="iconfont icon-xiangzuo"></i>
+            <div class="search">
+                <i class="iconfont icon-fangdajing"></i>
+                <input type="text" placeholder="美的空调">
+            </div>
+        </header>
         <section class="flex">
             <div class="sec-left">
             </div>
             <div class="sec-right">
                 <h4>热门分类</h4>
-                <div class="cate-product-list">
-                    <div class="item">
-                        <div class="img">
-                            <img src="https://img13.360buyimg.com/focus/s140x140_jfs/t13069/193/944900508/2525/d7c9efc/5a17f21dN905aaf4c.jpg" alt="">
-                        </div>
-                        <p>电压力锅</p>
-                    </div>
-                </div>
+                <div class="cate-product-list"></div>
             </div>
         </section>
-        <footer></footer>
+        <footer class="flex j-s">
+            <div class="footer-item">
+                <i class="iconfont icon-jingdong"></i>
+                <p>首页</p>
+            </div>
+            <div class="footer-item">
+                <i class="iconfont icon-fenlei"></i>
+                <p>分类</p>
+            </div>
+            <div class="footer-item">
+                <i class="iconfont icon-gouwuche"></i>
+                <p>购物车</p>
+            </div>
+            <div class="footer-item">
+                <i class="iconfont icon-weidenglu"></i>
+                <p>未登录</p>
+            </div>
+        </footer>
     </div>
 </body>
 <script src="js/jquery-1.12.4.js"></script>
@@ -40,6 +57,7 @@
     document.documentElement.style.fontSize = (document.documentElement.clientWidth / 450) * 16 + "px";
     window.onload = () => {
         getCate();
+        getProlist();
 
     }
 
@@ -51,6 +69,27 @@
             <div class="cate-item">${e.catename}</div>
             `)
                 });
+            })
+            .catch(err => {
+                console.error(err);
+            })
+    }
+
+    function getProlist() {
+        axios.get("./data/cate-prolist.json")
+            .then(res => {
+                res.data.forEach(e => {
+                    console.log(e)
+                    $(".sec-right .cate-product-list").append(`
+                    <div class="item">
+                        <div class="img">
+                            <img src="${e.imgurl}"
+                                alt="">
+                        </div>
+                        <p>${e.proname}</p>
+                    </div>
+                `)
+                })
             })
             .catch(err => {
                 console.error(err);

@@ -5,8 +5,39 @@
 
 /* 顶部搜索 */
 header {
-    background-color: yellow;
+    background-color: #fff;
     height: 3.5rem;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+
+.icon-xiangzuo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 1.25rem;
+}
+
+.icon-fangdajing {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: .625rem;
+    margin-right: .625rem;
+}
+
+header .search {
+    height: 1.8rem;
+    border-radius: .9rem;
+    background-color: #F7F7F7;
+    line-height: 1.8rem;
+    width: 22.5rem;
+
+}
+
+header .search input {
+    width: 18.875rem;
+    outline: none;
+    border: none;
+    background-color: #F7F7F7;
 }
 
 /* 中间section */
@@ -20,7 +51,6 @@ section {
 section .sec-left {
     width: 6.5625rem;
     height: 100%;
-    background-color: green;
     overflow: auto;
 }
 
@@ -40,8 +70,8 @@ section .sec-left .cate-item:hover {
 
 section .sec-right {
     flex: 1;
-    background-color: purple;
-    height: 68.75rem;
+    /* background-color: purple; */
+    /* height: 68.75rem; */
     overflow: auto;
 
 }
@@ -52,24 +82,60 @@ section .sec-right h4 {
     padding: .6875rem 0 .6875rem .5rem;
 }
 
-section .sec-right .cate-product-list{
+section .sec-right .cate-product-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
 }
-section .sec-right .cate-product-list .item{
+
+section .sec-right .cate-product-list .item {
     box-sizing: border-box;
     width: 33%;
-    height: 6.25rem;
-    border: 1px solid red;
+    /* height: 6.25rem; */
+    /* border: 1px solid red; */
+    background-color: #fff;
 }
 
-section .sec-right .cate-product-list .item .img
+section .sec-right .cate-product-list .item .img {
+    width: 100%;
+    text-align: center;
+}
+
+section .sec-right .cate-product-list .item .img img {
+    width: 80%;
+}
+
+section .sec-right .cate-product-list .item p {
+    height: 1.875rem;
+    line-height: 1.875rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #7f8286;
+}
 
 
 /* 底部footer */
 footer {
-    background-color: red;
+    background-color: #f8f8f8;
     height: 3.75rem;
+    box-shadow: 0 -0.125rem .3125rem rgba(0, 0, 0, 0.3);
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+    color: #8B8B8B;
+}
+
+.footer-item i {
+    font-size: 1.5rem;
+    margin-bottom: .125rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

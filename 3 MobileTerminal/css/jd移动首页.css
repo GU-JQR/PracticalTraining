@@ -1,5 +1,3 @@
-
-
 /* 大盒子设置
     设置弹性盒子 主轴 y
 */
@@ -196,7 +194,25 @@
     padding: 0 1.125rem;
 }
 
-.bottom {
+/* 底部footer */
+footer {
+    background-color: #f8f8f8;
     height: 3.75rem;
-    background-color: pink;
+    box-shadow: 0 -0.125rem .3125rem rgba(0, 0, 0, 0.3);
+    position: sticky;
+    bottom: 0;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+    color: #8B8B8B;
+}
+
+.footer-item i {
+    font-size: 1.5rem;
+    margin-bottom: .125rem;
 }

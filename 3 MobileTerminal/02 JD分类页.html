@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京JD分类页</title>
+    <!-- 引入axios -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.5.0/axios.js"></script>
+    <link rel="stylesheet" href="css/jd分类页.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+    <div class="box flex f-d j-s">
+        <header></header>
+        <section class="flex">
+            <div class="sec-left">
+            </div>
+            <div class="sec-right">
+                <h4>热门分类</h4>
+                <div class="cate-product-list">
+                    <div class="item">
+                        <div class="img">
+                            <img src="https://img13.360buyimg.com/focus/s140x140_jfs/t13069/193/944900508/2525/d7c9efc/5a17f21dN905aaf4c.jpg" alt="">
+                        </div>
+                        <p>电压力锅</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+
+<script>
+    //设置等比例像素切换 (通过脚本获取当前手机的屏幕宽度/设计稿图片宽度)
+    //配置好之后所有的尺寸单位改为rem单位  （按照根元素的比例进行设置）
+    document.documentElement.style.fontSize = (document.documentElement.clientWidth / 450) * 16 + "px";
+    window.onload = () => {
+        getCate();
+
+    }
+
+    function getCate() {
+        axios.get("./data/catelist.json")
+            .then(res => {
+                res.data.forEach(e => {
+                    $("section .sec-left").append(`
+            <div class="cate-item">${e.catename}</div>
+            `)
+                });
+            })
+            .catch(err => {
+                console.error(err);
+            })
+    }
+
+</script>
+
+</html>

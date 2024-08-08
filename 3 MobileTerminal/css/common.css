@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 提前设置好弹性盒子样式 */
+.flex {
+    display: flex;
+}
+
+.f-d {
+    flex-direction: column;
+}
+
+.j-s {
+    justify-content: space-between;
+}
+
+.j-a {
+    justify-content: space-around;
+}
+
+.j-c {
+    justify-content: center;
+}
+
+.a-c {
+    align-items: center;
+}

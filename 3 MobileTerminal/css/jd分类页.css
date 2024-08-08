@@ -1,0 +1,75 @@
+.box {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 顶部搜索 */
+header {
+    background-color: yellow;
+    height: 3.5rem;
+}
+
+/* 中间section */
+section {
+    flex: 1;
+    /* background-color: pink; */
+    overflow: auto;
+}
+
+/* 左边分类项目 */
+section .sec-left {
+    width: 6.5625rem;
+    height: 100%;
+    background-color: green;
+    overflow: auto;
+}
+
+section .sec-left .cate-item {
+    color: #4b4a55;
+    font-size: 1.25rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+section .sec-left .cate-item:hover {
+    color: #eb504f;
+    background-color: #fff;
+}
+
+section .sec-right {
+    flex: 1;
+    background-color: purple;
+    height: 68.75rem;
+    overflow: auto;
+
+}
+
+section .sec-right h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: .6875rem 0 .6875rem .5rem;
+}
+
+section .sec-right .cate-product-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+section .sec-right .cate-product-list .item{
+    box-sizing: border-box;
+    width: 33%;
+    height: 6.25rem;
+    border: 1px solid red;
+}
+
+section .sec-right .cate-product-list .item .img
+
+
+/* 底部footer */
+footer {
+    background-color: red;
+    height: 3.75rem;
+}

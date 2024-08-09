@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
+<script>
+    //var 定义变量 预解析
+    var name = "张三丰"
+    var name = "张无忌"
+    console.log(name)
+
+    var name2;
+    console.log(name2);//undefind
+
+    //let 不能变量同名
+    let age = 20;
+    // let age=18;
+    console.log(age)
+
+    //let 块级作用域 
+    function fn1() {
+        var sex = "男";
+        if (true) {
+            var score = 98;
+            let score2 = 99;
+            console.log(sex);
+        }
+        // console.log(score, score2);
+    }
+
+    fn1();
+    // const常量
+    let num1 = 90;
+    const PI = 3.14;
+
+    num1 = 98;
+    // PI = 1;
+    console.log(num1, PI);
+
+
+    // 变量提升
+    console.log(a)
+    var a = 10;
+
+    // console.log(b);
+    // let b = 10;
+</script>
+
 </html>

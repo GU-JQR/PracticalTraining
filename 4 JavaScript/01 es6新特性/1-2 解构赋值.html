@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+</body>
+<script>
+    //定义数组
+
+    let nums = [1, 2, 3, 4, 5];
+
+    console.log(nums, nums[0]);
+
+    //解构数组 被解构的数据肯定是复杂的 例如对象，数组，集合
+    // 左边使用和数组相同的中括号 表示，想要获得数组中第几个元素就是用逗号隔开
+    [, , a, b, c] = nums;
+    console.log(a, b, c)
+
+    //定义对象
+    let obj = { "name": "张三", "age": 20 };
+    // 解构对象 左边使用和对象相同的花括号表示，想要获取对象中哪个属性的值，花括号写属性的名称
+    // 改变变量的名称
+    let { age: a1, name } = obj;
+    console.log(name, a1);
+
+    //案例，从后台获取的json数据
+    let data = {
+        "title": "APP小程序开发",
+        "version": "1.0.1",
+        "catelist": ["加糖", "不加糖", "半糖", "加冰"],
+        "drink": {
+            "name": "瑞幸咖啡", "price": "9.9", "size": "超大杯"
+        }
+    }
+
+    // 1.解构出title的值
+    // 2.解构出分类中第二个数据值
+    // 3.解构出所点饮品的名称，价格，份量，分别用 drink-name ，drink-price，drink-size 变量存储
+
+    let { title } = data;
+    console.log(title);
+
+    let { catelist: [, second] } = data;
+    console.log(second);
+
+    let { drink: { name: drinkName, price: dinkPrice, size: drinkSize } } = data;
+    console.log(drinkName, dinkPrice, drinkSize);
+
+</script>
+
+</html>

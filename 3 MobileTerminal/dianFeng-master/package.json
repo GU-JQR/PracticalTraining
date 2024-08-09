@@ -1,7 +1,7 @@
 {
   "name": "dianfengshejiao",
   "version": "1.0.0",
-  "description": "#### Description 巅峰社交 静态图",
+  "description": "#### Description 时刻直播 静态图",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,8 @@
     "url": "https://gitee.com/yangxiaozhi92/dianfengshejiao.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dianfengshejiao": "file:"
+  }
 }

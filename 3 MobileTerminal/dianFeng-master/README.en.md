@@ -1,7 +1,7 @@
 # dianfengshejiao
 
 #### Description
-巅峰社交 静态图
+时刻直播 静态图
 
 #### Software Architecture
 Software architecture description

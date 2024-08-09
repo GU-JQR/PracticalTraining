@@ -1,3 +1,0 @@
-# zheye
-
-Vue, TypeScript, Bootstrap

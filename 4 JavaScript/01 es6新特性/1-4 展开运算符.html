@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //展开运算符 [a,b,c,d] ->展开后 a,b,c,d
+    let str = ["a", "b", "c", "d"];
+    console.log(str);
+    console.log(...str);//a,b,c,d
+    //作用1 合并数组
+    let names1 = [1, 2];
+    let names2 = [20, 30];
+    let names12 = [...names1, ...names2];
+    console.log(names12);
+    //作用2：给函数传递值
+    let arr6 = [1, 2, 3, 4, 5, 6];
+    let max1 = Math.max(1, 2, 3, 4, 5, 6);
+
+    let max2 = Math.max(...arr6);
+
+    //展开对象 {"name":"tom","age":20}->展开后 "name":"tom","age":20
+
+    var obj = { "name": "tom", "age": 20 }
+    var obj2 = {
+        gender: "男",
+        ...obj,//相当于 "name":"tom","age":20
+        name: "Rose",
+    }
+    console.log(obj2);
+
+
+
+</script>
+
+</html>

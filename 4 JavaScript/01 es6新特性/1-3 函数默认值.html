@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //函数几个要素：    函数名  形参列表   函数体 函数返回值 声明函数关键字 function
+    //函数形参
+    function add(a, b) {
+        return a + b;
+    }
+
+    //函数实参
+    let sum = add(10, 20);
+    console.log(sum);
+
+    //函数默认值  如果c没有赋值，使用默认值，如果c给定具体值，就使用具体的
+    function add2(a, b, c = 5) {
+        return a + b + c;
+    }
+
+    let sum2 = add2(10, 20);
+    console.log(sum2);
+
+
+    // 复杂的 参数对象
+    function showMes(person) {
+        console.log(person);
+    }
+
+    showMes({ "name": "张三", "age": 18 });
+
+    function showMes2(p = { "name": "李四", "age": 20 }) {
+        console.log(p);
+    }
+
+    showMes2();
+</script>
+
+</html>

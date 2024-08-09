@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //Map 集合 k-v key：唯一字符串 value：对应的值 字符串 数字 对象 数组 集合Map
+
+    //1.定义Map
+    let studentMap = new Map();
+    //2. map赋值
+    studentMap.set("tom", 99);
+    studentMap.set("jerry", 100);
+    studentMap.set("张三", 56);
+    //3.获取map中对应的数据 map.get(key)
+    console.log(studentMap.get("tom"));
+
+    //4.如何遍历打印map中所有的值 for...of
+    for (const [key, value] of studentMap) {
+        // console.log(it);
+        console.log(key, value);
+    }
+    console.log("---------------------------");
+    for (const [key, value] of studentMap.entries()) {
+        // console.log(e)
+        console.log(key, value);
+    }
+    console.log("---------------------------");
+    for (const k of studentMap.keys()) {
+        // console.log(e)
+        console.log(k);
+    }
+    console.log("---------------------------");
+    for (const v of studentMap.values()) {
+        // console.log(e)
+        console.log(v);
+    }
+    console.log("---------------------------");
+    studentMap.forEach((v, k) => {
+        console.log(v, k);
+    })
+</script>
+
+</html>

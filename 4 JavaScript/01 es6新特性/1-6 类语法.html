@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    class student {
+        "name" = "jqr"
+        "age" = "22"
+        "sex"
+        // 构造方法
+        // constructor(){}
+
+        constructor(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        }
+
+        //自定义方法
+        showInfo() {
+            console.log(this.name, this.age, this.sex);
+        }
+    }
+
+    //new的过程中调用方法
+    let s1 = new student("ljj", 22, "男");
+    console.log(s1.name);
+    s1.showInfo();
+</script>
+
+</html>

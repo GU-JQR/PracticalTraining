@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <button class="btn" id="mybtn">登录</button>
+</body>
+<style>
+    .btn {
+        width: 100px;
+        height: 40px;
+        background-color: orangered;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        font-weight: 700;
+        margin: 0 auto;
+        font-size: 20px;
+        display: block;
+    }
+</style>
+<script>
+    //函数表达式 --匿名函数：不需要写函数名（因为该函数只在特定的地方被使用，不需要被别人调用） function(){}
+
+    let fn = function () {//用一个指针指向一个具有某种功能的函数
+        console.log("111");
+    }
+    fn();
+
+    //回调函数中使用匿名函数 定时函数  数组中ES5 ES6方法 自定义高阶函数
+    // setInterval(() => {
+    //     console.log(1);
+    // }, 1000)
+
+    let arr = [1, 2, 3, 4];
+    arr.forEach((data) => {
+        console.log(data)
+    })
+
+    //定义对象 为了能够通过对象调用函数
+    let student = {
+        "name": "jqr",
+        "age": "22",
+        "showInfo": function () {
+            console.log("大家好，我是" + this.name + "年龄" + this.age)
+        }
+    }
+    student.showInfo();
+
+    // 使用箭头函数  function(){}-->()->{}
+    // 了解几个特殊函数： 如果匿名函数没有形参，括号不能省略
+    // let fun2=function（）{console.log("111")}
+    // let fn2=()=>{console.log("1111")}
+
+    //let fn3=function（a）{console.log(a)}
+    // let fn3 = a => { console.log(a) }
+    // fn3(10);
+
+    //let fn4=function（a,b）{console.log(a+b)}
+    // let fn4 = (a, b) => { console.log(a + b) }
+    // fn4(10, 20);
+    // let fn5=function(a,b){return a+b;}
+    // let fn5=(a,b)=> a+b;
+    // console.log(fn5(10,20));
+
+    let fn6 = r => r + 10;
+    console.log(fn6(5));
+
+    //this指向
+    //箭头函数里面this指向问题：普通函数this指向调用该函数的对象，但是箭头函数this指向的是定义函数时的对象，而不是使用函数时的对象
+    let name = "lzg"
+    let age = 21;
+    let student2 = {
+        "name": "ljj",
+        "age": 22,
+        "showInfo": (name, age) => {
+            console.log(`大家好，我是:${this.name}年龄${this.age}`)
+            console.log(`大家好，我是:${name}年龄${age}`)
+        }
+    }
+    student2.showInfo("csl", 20);
+
+    //点击事件 函数表达式（匿名函数）
+    // 1.通过DOM获取被点击对象
+    // let login_btn = document.getElementById("mybtn");
+    let login_btn = document.querySelector(".btn")
+    // console.log(login_btn)
+    // 2.给dom对象绑定点击监听
+    // login_btn.onclick = function () {
+    //     // alert("登录成功！");
+    //     console.log(this);
+    // }
+
+    //换成箭头函数
+    login_btn.onclick =  ()=> {
+        // alert("登录成功！");
+        console.log(this);
+    }
+</script>
+
+</html>

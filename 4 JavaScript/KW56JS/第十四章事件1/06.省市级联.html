@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 省份下拉框 -->
+    <select id="province">
+
+    </select>
+
+    <!-- 城市下拉框 -->
+    <select id="city">
+
+    </select>
+</body>
+
+<script>
+    //两个下拉框
+    let selProvince = document.querySelector("#province");
+    let selCity = document.querySelector("#city");
+
+    //事件：onchange  下拉框的选项发生变化的时候，触发
+    //怎么直到你选中的是哪一项?  根据options[selectedIndex]
+    //怎么获取选中项里面的value值或者文本    .text      .value
+    selProvince.onchange = function () {
+        //options 属性：下拉框里面所有选项
+        //selectIndex属性：选择的选项的索引
+        console.log(this.options.selectedIndex);
+        let selIndex = this.options.selectedIndex;
+        console.log(this.options[selIndex].text);
+        console.log(this.options[selIndex].value);
+        //获取选中省份的code
+        let code = this.options[selIndex].value;
+        addCities(code);
+
+    }
+
+    //构造两个数组：省份数组   市级数组
+    let provinces = [
+        ["01", "北京"],
+        ["02", "江苏"],
+        ["03", "安徽"],
+        ["04", "山东"]
+
+    ]
+
+    let cities = [
+        ["0101", "北京市"],
+        ["0201", "南京市"],
+        ["0202", "无锡市"],
+        ["0203", "徐州市"],
+        ["0301", "合肥市"],
+        ["0302", "滁州市"],
+        ["0303", "安庆市"],
+        ["0401", "济南市"],
+        ["0402", "烟台市"],
+        ["0403", "青岛市"]
+    ]
+    //如何创建一个option项？ new Option("文本内容","value值","默认选中","选中当前项")
+    //如何添加一个option项到下拉框？ sel.add("option对象"，"null：在末尾添加,option：在这个option之前")
+    // let qiqihaer =  new Option("齐齐哈尔市","1021");
+
+    // selCity.add(qiqihaer,null);
+    // selCity.add(new Option("长春市","0966",),selCity.options[0]);
+
+    // selCity.add(new Option("-城市-","0000",false,true),selCity.options[0]);
+
+    //1.定义一个方法，向省份下拉框里面添加内容
+    function addProvince() {
+        for (let i = 0; i < provinces.length; i++) {
+            // console.log(provinces[i][0],provinces[i][1]);
+            selProvince.add(new Option(provinces[i][1], provinces[i][0]))
+        }
+        selProvince.add(new Option("-请选择省份-", "00", true, true), selProvince.options[0]);
+    }
+
+    addProvince();
+
+    //2.定义一个方法，根据选择的省份填充对应的城市下拉框
+    function addCities(code) { // 01  02  03
+
+        //清空城市所有选项
+        selCity.options.length = 0;
+
+        //遍历city数组
+        for (let i = 0; i < cities.length; i++) {
+            //判断cities数组的code的前两位是否等于传递过来的code
+            if (cities[i][0].substring(0, 2) == code) {
+                //添加到城市下拉框中
+                selCity.add(new Option(cities[i][1], cities[i][0]));
+            }
+        }
+        //添加选项头   请选择城市
+        selCity.add(new Option("-请选择城市-", "0000", true, true), selCity.options[0]);
+    }
+
+    // addCities("04");
+
+
+
+
+</script>
+
+</html>

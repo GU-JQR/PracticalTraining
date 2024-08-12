@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+    //Prime  1-100以内的所有素数并统计个数
+    //这个数只能被1和它本身整除叫做素数
+    var count= 0;
+    var flag = 0;
+		for(var i=1;i<=100;i++){
+			for(var j=2;j<i;j++){
+				
+				if(i%j==0){
+					flag =1;  //标志位，不是质数
+					break;
+				}
+			}
+			if(flag==0){
+				console.log(i+"\t");
+                count++;
+			}
+			flag = 0; //标志位清空
+		}
+		
+
+
+
+
+
+</script>
+</html>

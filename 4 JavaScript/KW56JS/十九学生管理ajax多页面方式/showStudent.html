@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>展示学生页面</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        body {
+            height: 100vh;
+            background: radial-gradient(circle at top, rgb(57, 42, 114), rgb(119, 54, 150));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .list {
+            width: 50%;
+            background-color: #fff;
+
+
+        }
+
+        caption {
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: bold;
+            color: green;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0px;
+            border: 3px solid #ccc;
+        }
+
+        td,
+        th {
+            padding: 10px 15px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        button {
+            width: 40px;
+            height: 25px;
+            color: blue;
+            margin: 0px 5px;
+        }
+
+        button:hover {
+            color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list">
+        <table>
+            <caption>学生管理系统</caption>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    </th>
+                    <th>年龄</th>
+                    <th>性别</th>
+                    <th>分数</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<script>
+    let tbody = document.querySelector("tbody");
+    tbody.onclick = function (e) {
+        console.log(e.target.dataset.index, e.target.dataset.type);
+        let { index } = e.target.dataset;
+        let { type } = e.target.dataset;
+
+        if (type === "add") {
+            //进入添加页面
+            window.location.href = "addStudent.html";
+        } else if (type === "update") {
+            //本地存储，存储在浏览器缓存
+            localStorage.setItem("index", index);
+            //进入修改页面，传递index到修改页面
+            window.location.href = "updateStudent.html";
+        } else if (type === "delete") {
+            //删除该条记录 http://localhost:8080/kw53test/deleteStudent?stuIndex=x
+            //发送ajax请求删除
+            let xhr = new XMLHttpRequest();
+            xhr.open("get", `http://localhost:8080/kw53test/deleteStudent?stuIndex=${index}`);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log(xhr.responseText);
+                    if(xhr.responseText =="1"){
+                        alert("删除成功!")
+                        loadPage();
+                        
+                    }else{
+                        alert("删除失败!");
+                    }
+                }
+            }
+
+            //发送
+            xhr.send();
+
+        }
+    }
+
+function loadPage(){
+     //服务端查询全部接口 http://localhost:8080/kw53test/getAllStudent
+    //通过ajax获取全部学生信息
+    let xhr = new XMLHttpRequest();
+    xhr.open("get", "http://localhost:8080/kw53test/getAllStudent");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log(xhr.responseText);
+            //获取响应数据
+            let data = JSON.parse(xhr.responseText);
+            //做页面渲染
+            let students = data.map((item, index) => {
+
+                return `
+                    <tr>
+                        <td>${item.stuIndex}</td>
+                        <td>${item.stuId}</td>
+                        <td>${item.stuName}</td>
+                        <td>${item.stuAge}</td>
+                        <td>${item.stuSex}</td>
+                        <td>${item.stuScore}</td>
+                        <td><button data-index="${index}" data-type="update">修改</button>
+                            <button data-index="${index}" data-type="delete">删除</button>
+                            <button data-index="${index}" data-type="add">添加</button></td>
+                    </tr>
+                `;
+            })
+            //填充tbody
+            document.querySelector("tbody").innerHTML = students.join('');
+        }
+    }
+
+    //发送
+    xhr.send();
+}
+
+//第一次进入页面调用 loadPage()
+loadPage();
+
+   
+</script>
+
+</html>

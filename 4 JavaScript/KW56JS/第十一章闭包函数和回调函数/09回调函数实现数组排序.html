@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+   
+    // nums.sort((a,b)=>{
+    //     console.log(a,b);
+    //     return a-b;
+    // })
+
+    //自定义一个判断两个数大小的方法
+    // function judge (a,b){
+    //     // console.log(a,b);
+       
+    //         return a-b;
+       
+    // }
+
+
+    let nums = [2,12,56,21,122,1,41];
+    //排序方法,给数组
+
+    function myPaoPao(arr,callBack){
+
+        //冒泡排序
+        for(let i = 0;i<arr.length-1;i++){
+            for(let j = 0;j<arr.length-1-i;j++){
+                //降序
+                if(callBack(arr[j+1],arr[j])>0){
+                    // console.log(arr[i],arr[i+1]);
+                    let temp;
+                    temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+    }
+
+    //调用
+    myPaoPao(nums,(a,b)=>b-a);
+    console.log(nums);
+</script>
+</html>

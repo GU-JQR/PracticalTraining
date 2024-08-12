@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改页面</title>
+    <style>
+         *{padding: 0px;margin: 0px;list-style: none;}
+        body{
+            height: 100vh;
+            background: radial-gradient(  circle at top ,rgb(57, 42, 114),rgb(119, 54, 150));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .list{
+            width: 50%;
+            background-color: #fff;
+           
+
+        }
+
+        .update{
+            width: 25%;
+            background-color: #fff;
+           
+
+        }
+        caption{
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: bold;
+            color: green;
+        }
+        table{
+            width: 100%;
+            border-spacing: 0px;
+            border: 3px solid #ccc;
+        }
+
+        td,th{
+            padding: 10px 15px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        button{
+            width: 40px;
+            height: 25px;
+            color: blue;
+            margin: 0px 5px;
+        }
+
+        button:hover{
+            color: orangered;
+        }
+
+    </style>
+</head>
+<body>
+        <div class="update">
+            <table>
+                <caption>修改页面</caption>
+                <tr>
+                    <td>序号:</td>
+                    <td><input type="text" name="updateIndex" id="updateIndex"></td>
+                </tr>
+                <tr>
+                    <td>学号:</td>
+                    <td><input type="text" name="updateId" id="updateId"></td>
+                </tr>
+               <tr>
+                   <td>姓名:</td>
+                   <td><input type="text" name="updateName" id="updateName"></td>
+               </tr>
+               <tr>
+                   <td>年龄:</td>
+                   <td><input type="text" name="updateAge" id="updateAge"></td>
+               </tr>
+               <tr>
+                   <td>性别:</td>
+                   <td><input type="text" name="updateSex" id="updateSex"></td>
+               </tr>
+               <tr>
+                   <td>分数:</td>
+                   <td><input type="text" name="updateScore" id="updateScore"></td>
+               </tr>
+               <tr>
+                   <td colspan="2"><button id="updateBtn">修改</button><button id="updateReset" onclick="window.history.back()">返回</button></td>
+               </tr>
+            </table>
+        </div>
+</body>
+    <script>
+
+        //获取传递过来的索引号
+        let index =  localStorage.getItem("index");
+        console.log(index);
+
+        //通过传递过来的索引号，发起ajax请求，获得一条学生记录
+        let xhr = new XMLHttpRequest();
+        xhr.open("get",`http://localhost:8080/kw53test/getByUpdateIndex?stuId=${index}`);
+
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4 && xhr.status === 200){
+                let stu =  JSON.parse(xhr.responseText);
+                console.log(stu);
+                //将学生对象放入修改table表中回显
+                document.querySelector("#updateIndex").value = stu.stuIndex;
+                document.querySelector("#updateId").value = stu.stuId;
+                document.querySelector("#updateName").value = stu.stuName;
+                document.querySelector("#updateAge").value = stu.stuAge;
+                document.querySelector("#updateSex").value = stu.stuSex;
+                document.querySelector("#updateScore").value = stu.stuScore;
+            }
+        }
+
+        //发送
+        xhr.send();
+    </script>
+</html>

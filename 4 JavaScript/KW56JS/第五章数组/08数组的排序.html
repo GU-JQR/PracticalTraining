@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+    var nums = [33,13,24,3,16,99,123,88];
+    console.log(nums);
+
+    //利用sort方法排序
+    nums.sort(function (a, b){return a - b});
+    console.log(nums);
+
+    nums.sort(function (a, b){return b-a});
+    console.log(nums);
+
+    //自己写冒泡排序
+    function mySort(arr){
+        //外层循环表示比较轮次   length-1
+        for(var i =0;i<arr.length-1;i++){
+            //内层循环表示每轮比较的次数   length-1-i
+            for(var j=0;j<arr.length-1-i;j++){
+                //比较相邻的两个元素，前一个数大于后一个数，交换
+                var temp;
+                if(arr[j] > arr[j+1]){
+                    temp  = arr[j];
+                    arr[j] =arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+    }
+
+    var nums2 = [33,13,24,3,16,99,123,88];
+    //调用方法
+    mySort(nums2);
+    console.log(nums2);
+
+
+    var arr=["b",'a','c','a','j','a','c','b'];
+    var count = 0;
+    // 数组里面每一个元素都执行一次function的方法，
+    //每一个元素就是funciton里面的item,索引就是indexindex
+    arr.forEach(function(item,index){
+        if(item==="a"){
+            count++;
+        }
+    })
+
+    console.log(count);
+
+    //去掉重复
+    var arr = [5,4,26,9,4,8,5,14]; 
+    //截取子数组
+    var subArr = arr.slice(1,4);
+    console.log(subArr);
+
+
+</script>
+</html>

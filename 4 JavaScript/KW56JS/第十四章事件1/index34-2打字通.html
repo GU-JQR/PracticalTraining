@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       *{
+           margin: 0;
+           padding: 0;
+       }
+       #box{
+           width: 1000px;
+           height: 500px;
+           margin: 100px auto;
+           background-color: black;
+           position: relative;
+       }
+       .zm{
+           width: 30px;
+           height: 30px;
+           background-color: red;
+           color:white;
+           text-align: center;
+           position: absolute;
+       }
+   </style>
+</head>
+<body>
+    <div id="box">
+        <!-- <div class="zm">A</div> -->
+    </div>
+    <script>
+        // 定义一个字符列表
+        let zmList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        // 定时器。每个1秒钟出现一个字母
+        let time1 = setInterval(()=>{
+            // 创建一个字母容器
+            let zms = document.createElement("div")
+            zms.className ="zm"
+            // 随机生成   floor   向下取整
+            zms.innerHTML =zmList[Math.floor( Math.random()*26)] 
+            // 获取字母出现的位置
+            zms.style.left = Math.random() * 970 + "px"
+            // 调用随机生成的颜色 
+            zms.style.backgroundColor = colorGet()
+            box.appendChild(zms)
+        },1000)
+
+        // 定时器   下落
+        // let offsetXs = 0
+        // let offsetYs = 0
+        let time2 =  setInterval(()=>{
+            //  获取所有的字符
+            document.querySelectorAll(".zm").forEach(a =>{
+                let box = document.getElementById("box")
+                // 让我们的字母下落，是让div 下落   offsetX,Y  offsetTop
+                a.style.top = a.offsetTop + 10 + "px"
+                // 判断下落的范围，如果出了显示框，就给提示或者停止
+                if(a.offsetTop >= box.offsetHeight - 30){
+                    alert("你超过范围")
+                    // 清除定时器
+                    clearInterval(time1)
+                    clearInterval(time2)
+                }
+            })
+         },100)
+        // 定义随机生成颜色
+        function colorGet(){
+            // 十六进制颜色   #333333   #ffffff
+            let colors = "0123456789ABCDEF"
+            let colors_logo = "#"
+            for (let i = 0; i <= 5; i++) {
+                colors_logo +=colors[Math.floor(Math.random()*16)]
+            }
+            return colors_logo
+        }
+        // 绑定键盘事件，进行删除字母
+        window.onkeyup = function(e){
+            // ES6中解构赋值法
+            // 获取按键字符
+            let {key} = e
+            //获取所有字符，通过遍历
+            document.querySelectorAll(".zm").forEach(a =>{
+                if(a.innerHTML === key.toUpperCase()){
+                    a.remove()
+                }
+            })
+        }
+    </script>
+</body>
+</html>

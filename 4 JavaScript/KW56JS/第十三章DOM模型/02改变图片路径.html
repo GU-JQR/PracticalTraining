@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0px;margin: 0px;list-style: none;}
+        .box{
+            width: 500px;height: 500px;
+            background-color: yellow;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box img{
+            width: 350px;
+        
+        }
+        .box button{
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: pink;
+            color: white;
+            margin: 20px 15px;
+            /* padding: 5px; */
+        }
+        .box p{
+            height: 50px;
+            margin: 10px 0px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p id="title">1111111111111111</p>
+        <img id="myImg" src="img/img01.jpg" alt="">
+        <div>
+            <button id="preBtn" onclick="pre()">上一张</button>
+            <button id="nextBtn" onclick="next()">下一张</button>
+        </div>
+        
+    </div>
+
+</body>
+<script>
+    //1.将图片路径存入数组中
+    let imgs = ["img/img01.jpg","img/img02.jpg","img/img03.jpg","img/img04.jpg","img/img05.jpg"];
+    //2.声明变量
+    let picCount = imgs.length;
+    let n = 1; //当前第几张图片
+    let index = 0;//当前索引
+    //3.创建方法
+    function pre(){
+        //如果到头了，索引为0，不能减
+        if(index<=0){
+            index = imgs.length-1;
+        
+        }else{
+            index--;
+        }
+        n = index+1;
+        //元素改变：图片的src修改
+        let imgOjb = document.querySelector("#myImg");
+        imgOjb.setAttribute("src",imgs[index]);
+        //标题的内容修改
+        title.innerHTML = `这里一共有${picCount},现在是第${n}张`;
+    }
+    
+    function next(){
+         //如果到最后了，index = 0
+         if(index>=imgs.length-1){
+            index = 0;
+        
+        }else{
+            index++;
+        }
+        n = index+1;
+        //元素改变：图片的src修改
+        let imgOjb = document.querySelector("#myImg");
+        imgOjb.setAttribute("src",imgs[index]);
+        //标题的内容修改
+        title.innerHTML = `这里一共有${picCount},现在是第${n}张`;
+   
+    }
+</script>
+</html>

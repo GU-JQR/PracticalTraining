@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //外层循环执行一次，内层循环全部执行
+    //---外层循环表示的是行数，   内层循环表示的是列数
+    for(var i =1;i<=5;i++){
+        //打印左边空格
+        for(var j =5-i;j>=1;j--){
+            document.write("#");
+        }
+
+        //打印右边星号
+        for(var k =0;k<5;k++){
+            document.write("*");
+        }
+
+        //换行
+        document.write("<br/>");
+    }
+</script>
+</html>

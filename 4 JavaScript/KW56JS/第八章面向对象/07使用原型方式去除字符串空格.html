@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+    //1.声明字符串
+    let s = " kgc sss ";
+    console.log(s);
+    //2.查看String  api 没有去除左边空格的方法
+    //3.自己写一个
+    String.prototype.lTrim = function(){
+        //去除左边的空格
+        return this.replace(/^\s/g,"");
+    }
+
+    String.prototype.rTrim = function(){
+        //去除右边的空格
+        return this.replace(/\s$/g,"");
+    }
+
+    String.prototype.allTrim = function(){
+        //去除全部的空格
+        return this.replaceAll(/\s/g,"");
+    }
+
+    //4.实例可以调用原型lTrim()方法
+    let newStr =  s.lTrim();
+
+    
+
+    console.log("-------------------");
+    console.log(newStr);
+    console.log("-------------------");
+    newStr = s.rTrim();
+    console.log(newStr);
+    console.log("-------------------");
+    newStr = s.allTrim()
+    console.log(newStr);
+</script>
+</html>

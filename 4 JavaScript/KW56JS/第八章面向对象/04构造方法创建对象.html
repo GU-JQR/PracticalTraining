@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    //1.通过构造方法创建小狗对象
+    //构造方法一般使用的是类型的名称，
+    //构造方法的方法名首字母大写
+    //返回值不需要写出来，但是如果你非要写分两种情况：
+    //1.返回的是基本类型的数据: 没有作用
+    //2.返回的是引用类型的数据: 返回的就是那个引用类型的对象，对于构造函数来说无意义
+    function Dog(name,color,age,type){
+        //构造方法里面的this还是全局变量window吗?
+        console.log(this);
+        //构造方法里面如何给属性赋值
+        //不加this的变量是局部变量，形参变量
+        //加this的是小狗对象的属性名称
+        this.name = name;   
+        this.color = color;
+        this.age = age;
+        this.type = type;
+
+        //在构造方法里面添加对象的方法
+        this.sayHi = function(){
+            console.log(`大家好，狗狗的名字：${this.name}
+                         狗狗的颜色:${this.color}`);
+        }
+
+        //return 构造方法自动return创建的对象
+        //非要写return
+        // return new Date();
+    }
+
+    //new Dog()
+    //直接调用Dog()和  new Dog()区别：直接调用Dog()和普通方法一样，没有构造方法的特性
+    //new Dog()执行  ，this就是当前Dog实例对象
+    Dog("小白","白色",3,"泰迪");
+    console.log("------------------------------");
+    let dog1 =  new Dog("旺财","白色",3,"泰迪");
+    console.log(dog1);
+
+    // let dog2 = new Dog("小强","黄色",5,"金毛");
+
+    // dog1.sayHi();
+    // dog2.sayHi();
+
+</script>
+</html>

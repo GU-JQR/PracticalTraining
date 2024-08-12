@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    /*
+      循环体：上机编写程序
+      条件：老师检查是否合格
+    */
+
+//    var isPass = true;
+//    while(!isPass){
+//        console.log("上机编写程序");
+
+//        var choice = prompt("老师检查是否合格(y/n)");
+//        if(choice == "y"){
+//            isPass = true;
+//        }
+
+//    }
+//    console.log("过关");
+
+    //必须要做一次试卷
+    // var isPass ;  //undefined
+    // do{
+    //     console.log("上机编写程序");
+
+    //    var choice = prompt("老师检查是否合格(y/n)");
+    //    if(choice == "y"){
+    //        isPass = true;
+    //    } else{
+    //        isPass = false;
+    //    }
+    // }while(!isPass);
+
+    // console.log("过关");
+
+    //计算1-50之间偶数的和  使用do-while
+    var i = 1;
+    var sum = 0;
+    do{
+        if(i%2==0){
+            sum+=i; //sum =sum+i;
+        }
+        i++;
+     }while(i<=50);
+     console.log(sum);
+
+
+</script>
+</html>

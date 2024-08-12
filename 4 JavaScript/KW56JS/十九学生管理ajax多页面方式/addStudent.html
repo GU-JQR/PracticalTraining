@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加页面</title>
+    <style>
+         *{padding: 0px;margin: 0px;list-style: none;}
+        body{
+            height: 100vh;
+            background: radial-gradient(  circle at top ,rgb(57, 42, 114),rgb(119, 54, 150));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .list{
+            width: 50%;
+            background-color: #fff;
+           
+
+        }
+
+        .add{
+            width: 25%;
+            background-color: #fff;
+           
+
+        }
+        caption{
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: bold;
+            color: green;
+        }
+        table{
+            width: 100%;
+            border-spacing: 0px;
+            border: 3px solid #ccc;
+        }
+
+        td,th{
+            padding: 10px 15px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        button{
+            width: 40px;
+            height: 25px;
+            color: blue;
+            margin: 0px 5px;
+        }
+
+        button:hover{
+            color: orangered;
+        }
+
+    </style>
+</head>
+<body>
+        <div class="add">
+            <table>
+                <caption>添加页面</caption>
+               <tr>
+                   <td>姓名:</td>
+                   <td><input type="text" name="addName" id="addName"></td>
+               </tr>
+               <tr>
+                   <td>年龄:</td>
+                   <td><input type="text" name="addAge" id="addAge"></td>
+               </tr>
+               <tr>
+                   <td>性别:</td>
+                   <td><input type="text" name="addSex" id="addSex"></td>
+               </tr>
+               <tr>
+                   <td>分数:</td>
+                   <td><input type="text" name="addScore" id="addScore"></td>
+               </tr>
+               <tr>
+                   <td colspan="2"><button id="addBtn">添加</button><button onclick="window.history.back()">返回</button></td>
+               </tr>
+            </table>
+        </div>
+</body>
+<script>
+
+    /*
+      添加学生
+      {
+       
+        "stuName": "潘磊2",
+        "stuAge":22,
+        "stuSex": "男",
+        "stuScore":89
+      }
+    */
+   
+   //2.点击添加按钮的时候
+   let addBtn = document.querySelector("#addBtn");
+   addBtn.onclick = function(){
+       console.log("111");
+       //1.获取添加数据
+         let stuName = document.querySelector("#addName").value;
+         let stuAge = document.querySelector("#addAge").value; 
+         let stuSex = document.querySelector("#addSex").value;
+         let stuScore = document.querySelector("#addScore").value;
+         let data = {
+                "stuName": stuName,
+                "stuAge":stuAge,
+                "stuSex": stuSex,
+                "stuScore":stuScore
+            }
+
+         //2.发送ajax请求
+         let xhr = new XMLHttpRequest();
+         xhr.open("post","http://localhost:8080/kw53test/addStudent");
+         xhr.setRequestHeader("Content-type","application/json");  //设置请求头的类型
+         //3.事件
+         xhr.onreadystatechange = function(){
+             if(xhr.status === 200 && xhr.readyState === 4){
+                 console.log(xhr.responseText);
+                 //返回显示页面
+                window.location.href = "showStudent.html";
+             }
+         }
+         //4.发送
+        //  传递的json对象需要转换成字符串的形式发送
+        let dataStr = JSON.stringify(data);
+         xhr.send(dataStr);
+       
+    }
+
+
+</script>
+</html>

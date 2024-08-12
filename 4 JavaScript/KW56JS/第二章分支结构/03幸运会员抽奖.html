@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    //比较百位数字和随机数字是否一直，如果一致中奖，否则谢谢参与
+    //js中有一个Math(数学)内置对象,有一个方法random()能够产生0-1之间的随机数字
+     var luckNum =  parseInt(Math.random()*10); //乘以10之后变成0-9之间整数
+     console.log(luckNum);
+    //如何从键盘录入一个数值
+    var vipNo = prompt("请输入一个4位的会员号:");
+    console.log(vipNo);
+    //录入的内容都是一个字符串类型String
+    console.log(typeof vipNo);
+    //string 转换成  number类型
+    // var vipNumber =  Number(vipNo);
+    var vipNumber = parseInt(vipNo);
+    console.log(typeof vipNumber);
+    //获取百位的数字
+    var bai =  parseInt(vipNumber%1000/100);
+    console.log(bai);
+     if(bai===luckNum){
+         console.log(vipNumber+"号客户是幸运客户,恭喜你中奖了！");
+     }else{
+         console.log(vipNumber+"号客户，谢谢参与!");
+     }
+</script>
+</html>

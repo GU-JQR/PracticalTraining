@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+      var 函数作用域
+      let 块级作用域
+      全局作用域:函数外定义变量
+    */
+
+    let g = 100;
+
+     function a(){
+
+        for(var i = 0;i<10;i++){
+            console.log("-----------for循环范围内:"+i);
+        }
+
+        //i  在整个函数中都生效
+        console.log("a函数里面的i:"+i);
+     }
+
+     //调用函数a
+    //  a();
+     //函数外
+    //  console.log("a函数外i的值:"+i);
+
+
+    function b(){
+        for(let j = 0;j<10;j++){
+            console.log(">>>>>>>>>>>for范围内j:"+j);
+            console.log("***********************************b函数的for循环范围获得g:"+g);
+        }
+        //for外面范围能否得到jg
+        // console.log("for的外面，b函数里面 j:"+j);
+        console.log("在函数b内部获得全局变量g："+g);
+    }
+
+    b();
+
+    // console.log("b函数外j的值:"+j);
+    console.log("函数外面获得全局变量g:"+g);
+
+
+    function c(num){
+        console.log("begin c-----------------");
+        if(num >10){
+            return; //跳出方法体
+        }else{
+            console.log(num);
+        }
+        console.log("end c-------------------");
+    }
+
+
+
+    c(2);
+</script>
+</html>

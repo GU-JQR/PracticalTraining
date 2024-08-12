@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0px;margin: 0px;list-style: none;}
+        .contain{
+            border: 1px solid red;
+        }
+
+        table{
+            margin: 0 auto;
+            border: 3px solid #ccc;
+            border-spacing: 0px;
+
+        }
+
+        th,td{
+            padding: 5px 10px;
+            /* text-align: right; */
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <form action="#">
+            <table>
+               <tr>
+                   <td>用户名:</td>
+                   <td><input type="text" name="userName" id="userName">
+                        <span id="nameCheckSpan"></span>
+                  </td>
+               </tr>
+               <tr>
+                   <td>密码:</td>
+                   <td><input type="text" name="pwd" id="pwd">
+                    <span id="pwdCheckSpan"></span>
+                </td>
+               </tr>
+               <tr>
+                   <td>手机号:</td>
+                   <td><input type="text" name="phoneNo" id="phoneNo">
+                    <span id="phoneCheckSpan"></span>
+                </td>
+               </tr>
+               <tr>
+                   <td colspan="2">
+                        <input type="submit" value="注册">
+                   </td>
+               </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+<script>
+    let userInput  =document.querySelector("#userName");
+    let nameSpan = document.querySelector("#nameCheckSpan");
+    //单行文本框 光标进入的时候触发聚焦事件
+    userInput.onfocus = function(){
+        //span显示一个提示
+        nameSpan.innerHTML = "用户名格式:xxxxxx";
+        nameSpan.style.color = "#ccc";
+    }
+    //单行文本框失去焦点的时候触发失焦事件
+    userInput.onblur = function(){
+        console.log("2222");
+        //获取输入框里面的value
+        let name =  this.value;
+        console.log(name);
+        //将value进行正则验证，判断是否符合要求，在span里面给出提示
+        //用户名格式：不少于6个字符,首个字符是字母或者汉字，其他任意
+        let reg = /^(([a-zA-Z]|[\u4E00-\u9FA5])([a-zA-Z0-9]|[\u4E00-\u9FA5]){5,})$/;
+        if(reg.test(name)){
+            nameSpan.innerHTML ="用户名可用";
+            nameSpan.style.color = "green";
+        }else{
+            nameSpan.innerHTML ="用户名不可用";
+            nameSpan.style.color = "red";
+        }
+    
+    }
+
+    //手机号满足正则  ：  1[3456789]xxxx
+    //年龄：1-120岁
+    //密码：首字母大写，不少于6位，
+    //邮箱：邮箱格式
+    
+</script>
+</html>

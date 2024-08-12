@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //手动录入两个数:
+    let a = +prompt("录入第一个数:");
+    let b = +prompt("录入第二个数:")
+
+    //编写获取最大数的方法
+    function getMax(n1,n2){
+        if(n1 > n2){
+            return n1;
+        }else{
+            return n2;
+        }
+    }
+
+    //调用函数，传入实参，获取最大的一个数，放入maxNum变量中
+    let maxNum = getMax(a,b);
+    //将最大的数打印到网页中
+    document.write(maxNum);
+</script>
+</html>

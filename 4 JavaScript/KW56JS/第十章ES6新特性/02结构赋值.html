@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    //对象数组
+     let stuList = [
+        {
+            "name":"张三",
+            "age":22,
+            "score":98
+        },
+        {
+            "name":"李四",
+            "age":25,
+            "score":91
+        },
+        {
+            "name":"王五",
+            "age":21,
+            "score":87
+        },
+        {
+            "name":"赵六",
+            "age":22,
+            "score":56
+        }
+        
+    ]
+
+    //获取对象数组stuList里面的第一个元素 放入一个变量stu1里面
+    let stu1 = stuList[0];
+
+    //通过解构的方式实现以上
+    let [a] =stuList;
+
+    console.log(stu1);
+    console.log(a);
+
+    //继续获取stuList里面第一个学生的考试成绩
+    console.log(stuList[0].score); 
+    //通过解构实现以上功能:
+    let [,,{score:s3}] = stuList;
+    console.log(s3);
+
+    let  [{score},{score:score2},{score:score3}] = stuList;
+    console.log(score,score2,score3);
+
+</script>
+</html>

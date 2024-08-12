@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    /*
+       逛5家商店买衣服，统计一共买了多少件衣服？
+    */
+    var totalCount = 0;
+    for(var i = 1;i<=5;i++){
+       console.log("进入第"+i+"家商店==========");
+        do{
+            var choice = prompt("请问你要买衣服吗?(y/n)");
+            //如果你选择了y表示你买了一件衣服
+            if("y"==choice){
+               console.log("您在第"+i+"家商店买了一件衣服")
+                totalCount++;
+            }else{
+               console.log("离开第"+i+"家商店!");
+                break;
+            }
+        }while(true);
+    }
+
+    console.log("一共买了"+totalCount+"件衣服。")
+    
+
+</script>
+</html>

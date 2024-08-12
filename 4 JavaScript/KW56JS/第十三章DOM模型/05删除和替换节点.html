@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+
+<script>
+
+    //删除li  3的元素
+    /*
+      1.选中第三个li
+      2.通过removeChild()方法删除，   父元素.removeChild(孩子) ==>
+                                    孩子.parentNode.removeChild(孩子);
+    */
+   let liObj;
+   let liObj4;
+   let lis  = document.querySelectorAll("li");
+   lis.forEach((item,index)=>{
+       if(index===2){
+           console.log(item);
+           liObj = item;
+       }
+       if(index === 3){
+        liObj4 = item;
+       }
+   })
+   //删除  dom core
+//    liObj.parentNode.removeChild(liObj);
+liObj.remove();
+
+//替换：replaceChild(newNode,oldNode)  用新节点替换旧节点
+//父节点.replaceChild()
+//替换li  4  ,  li  10000
+let li10000 = document.createElement("li");
+li10000.innerHTML = 10000;
+
+liObj4.parentNode.replaceChild(li10000,liObj4);
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

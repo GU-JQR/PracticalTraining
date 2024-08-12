@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    //第一种方式:
+    //01数组的创建
+    var fruits = new Array();   //开辟内存空间   6个空间
+
+    //02赋值
+    fruits[0] = "香蕉";
+    fruits[1] = "苹果";
+
+    // /03调用变量
+    console.log(fruits);
+    console.log(fruits[0]);
+    console.log(fruits[1]);
+    console.log(fruits[3]);
+    console.log(fruits[6]);
+
+    //第二种方式:字面量方式
+    var students = ["章清","吴越","杨名齐","刘金铃","罗佳"];
+
+    console.log(students[0]);
+    console.log(students[3]);
+    //数组的长度  长度的值-1等于最大下标
+    console.log(students.length);
+
+    //判断某个元素在数组中的位置
+    let i =  students.indexOf("刘金铃");
+    console.log(i);
+
+    //如果一个元素不在数组中，通过indexOf()方法返回的是-1
+    //indexOf()可以判断某个值是否在数组中
+    let j =  students.indexOf("李四");
+    console.log(j);
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

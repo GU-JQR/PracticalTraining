@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    /*
+        9.写一个程序，接受两个数字，判断这两个数字的乘积是大于还是等于输入的两个值中的任何一个，
+            那么屏幕显示如下信息：
+            差等于值<输入的数字>
+            如果差值不等于输入的两个值中的任何一个，那么屏幕将显示如下信息：
+            差不等于输入的任何值
+    */
+    var num1 = parseInt(prompt("清输入第一个数:"));
+    var num2 = parseInt(prompt("请输入第二个数:"));
+
+    //计算乘
+    var ji = num1*num2;
+    if(ji==num1){
+        console.log("差等于值"+num1);
+    }else if(ji== num2){
+        console.log("差等于值"+num2);
+    }else{
+        console.log("差不等于输入的任何值");
+    }
+
+
+</script>
+</html>

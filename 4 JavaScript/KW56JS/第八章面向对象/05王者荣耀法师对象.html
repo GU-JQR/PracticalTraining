@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    //1.通过构造方法定义法师的类模板
+    function FaShi(name,hp,mp,ap,skill){
+        //法师类的属性————血量，蓝条，法强，技能
+        this.name = name;
+        this.hp = hp;
+        this.mp = mp;
+        this.ap = ap;
+        this.skill = skill;
+
+        //法师类的方法__普工，技能输出
+        this.a = function(){
+            console.log(this.name+"发起一次普通攻击..");
+        }
+
+        this.skillA = function(){
+            console.log(this.name+"发起了一次"+this.skill+"...");
+        }
+    }
+
+    //2.创建各种法师对象
+    let anQiLa = new FaShi("安其拉",2500,1020,250,"激光");
+    let wangZhaoJun = new FaShi("王昭君",2550,1020,230,"风霜风暴");
+
+    //3.输出各个法师对象的方法
+    anQiLa.a();
+    anQiLa.skillA();
+
+    console.log("-------------------------");
+    wangZhaoJun.a();
+    wangZhaoJun.skillA();
+
+
+</script>
+</html>

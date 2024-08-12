@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    var dogs = ["金毛","二哈","泰迪","萨摩","阿拉斯加","中华田园犬"];
+    //1.查询指定元素
+    console.log(dogs[0]);
+
+    //2.查询全部元素并打印
+    console.log(dogs);
+    //---使用for循环对数组进行遍历操作
+    for(var i = 0;i<dogs.length;i++){
+        dogs[i]+=" 狗"
+        console.log(dogs[i]);
+    }
+
+    //3.找出二哈的索引下标
+    var index =  dogs.indexOf("二哈 狗");
+    console.log(index);
+
+    //4.查询最大最小值
+    var nums = [2,33,14,66,122,38,33,66];
+    var max = nums[0];
+    var min = nums[0];
+    for(var j = 0;j<nums.length;j++){
+        if(max < nums[j]){
+            max = nums[j];
+        }
+
+        if(min>nums[j]){
+            min = nums[j];
+        }
+    }
+    console.log(max,min);
+
+
+    //5.查询是否包含指定的值
+    let isExists =  nums.includes(999);
+    console.log(isExists);
+
+    //6.元素最后出现的位置
+    let lastIndex =  nums.lastIndexOf(33);
+    console.log(lastIndex);
+
+    //7.另一种循环for-in,针对于集合的一种循环迭代方式
+    //for(var k = 0;k<nums.length;k++)
+    for(var k in nums){
+        console.log(nums[k]);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

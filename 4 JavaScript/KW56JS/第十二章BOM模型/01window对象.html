@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv" style="width: 300px;height: 100px;border: 1px solid red;">哈哈哈</div>
+</body>
+
+<script> 
+
+  window.moveTo(100,100);
+    //window方法
+    // console.log(this);
+    // window.alert("111")
+    //属性：文档显示区的高度，宽度
+    console.log(window.innerWidth,window.innerHeight);
+    //窗口的外部高度，包含工具条与滚动条,宽度
+    console.log(window.outerWidth,window.outerHeight);
+    //获取屏幕窗口的x坐标，y坐标
+    console.log(window.screenLeft,window.screenTop);
+    console.log(window.screenX,window.screenY);
+    
+    let myObj = document.getElementById("myDiv");
+
+    // myObj.moveBy(100,100);
+    // console.log(myObj.clientWidth,myObj.clientHeight,myObj.clientLeft,myObj.clientTop);
+    
+    let myWindow=window.open('','','width=1000,height=50000');
+    // myWindow.moveTo(300,200);    //窗口的左上角移动到一个指定的坐标
+    // myWindow.moveBy(100,100); //可相对窗口的当前坐标把它移动指定的像素
+    // myWindow.moveTo(300,200);
+
+    // 把内容滚动到指定的坐标。scrollTo()
+    myWindow.scrollTo(100,100);
+
+</script>
+</html>

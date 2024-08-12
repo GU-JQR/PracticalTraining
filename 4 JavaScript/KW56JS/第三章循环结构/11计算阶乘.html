@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    /*
+      从控制台输入一个数n，使用for循环实现求n!
+	  提示：n! =n*(n-1)*(n-2)*…*1
+	  升级：求1！+2！+3!+…+n!的值
+    */
+     //录入一个数
+     var ji = 1;
+     var sum = 0;
+     var num = parseInt(prompt("输入一个数:"))
+    //  for(var i = 1;i<=num;i++){
+    //     ji*= i;
+    //  }
+
+    //  console.log(num+"的阶乘是:"+ji);
+
+        //求1！+2！+3!+…+n!的值
+    for(var i = 1;i<=num;i++){
+        ji*=i; //ji = ji*i;
+        sum+=ji;     
+    }
+
+    console.log(sum);
+     
+
+
+
+
+
+</script>
+</html>

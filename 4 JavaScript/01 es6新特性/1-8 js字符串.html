@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // let s = ["America", "Greece", "Britain", "Canada", "china", "Egypt"];
+    // let sum = 0;
+    // for (let i = 0; i < 6; i++) {
+    //     for (let char of s[i]) {
+    //         if (char === 'a' || char === 'A') {
+    //             sum++;
+    //             break;
+    //         }
+    //     }
+    // }
+    // console.log(sum)
+
+    // let ans = 0;
+    // for (let i = 0; i <= 100; i += 2) {
+    //     ans += i;
+    // }
+    // console.log(ans);
+
+    // for (let i = 1; i <= 100; i++) {
+    //     if (i % 3 == 0) {
+    //         if (i % 5 == 0) {
+    //             console.log("FlipFlop");
+    //         } else console.log("Flip");
+    //     } else if (i % 5 == 0) {
+    //         console.log("Flop");
+    //     }
+    // }
+
+    // for (let i = 0; i < 35; i++) {
+    //     let j = 35 - i;
+    //     let s = i * 4 + j * 2;
+    //     if (s === 94) {
+    //         console.log(i, j);
+    //         break;
+    //     }
+    // }
+
+    // for (let i = 0; i < 5; i++) {
+    //     for (let k = 0; k < (5 - i) + 1; k++) {
+    //         document.write("&nbsp;")
+    //     }
+    //     for (let j = 0; j < i * 2 + 1; j++) {
+    //         document.write("*")
+    //     }
+    //     document.write("<br>")
+    // }
+
+    // for (let i = 3; i >= 0; i--) {
+    //     for (let k = 0; k < (3 - i) + 3; k++) {
+    //         document.write("&nbsp;")
+    //     }
+    //     for (let j = 0; j < i * 2 + 1; j++) {
+    //         document.write("*")
+    //     }
+    //     document.write("<br>")
+    // }
+
+    // let ans = 0;
+    // for (let i = 1; i <= 500; i++) {
+    //     let t = i;
+    //     let j = 0;
+    //     while (t) {
+    //         let s = t % 10;
+    //         t = Math.floor(t / 10);
+    //         if (s === 4) {
+    //             j++;
+    //             break
+    //         }
+    //     }
+    //     if (j == 0) {
+    //         ans++;
+    //     }
+    // }
+    // console.log(ans);
+
+    for (let i = 1; i <= 9; i++) {
+        for (let j = 0; j <= 9; j++) {
+            for (let k = 0; k <= 9; k++) {
+                let a = i * i * i + j * j * j + k * k * k;
+                let b = i * 100 + j * 10 + k;
+                if (a === b) {
+                    console.log(b);
+                }
+            }
+        }
+    }
+</script>
+
+</html>

@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <button id="endBtn" onclick="endSayHi()">结束</button>
 </body>
 
 <script>
-     let t1;
-     
+    let t1;
 
-    function endSayHi(){
+
+    function endSayHi() {
         clearTimeout(t1);
     }
 
-    function sayHi(){
+    function sayHi() {
         console.log("大家好！");
     }
     //等3秒后，再页面弹出一句话
@@ -33,4 +35,5 @@
     //关闭延迟任务  clearTimeout(延迟定时器的标记)
 
 </script>
+
 </html>

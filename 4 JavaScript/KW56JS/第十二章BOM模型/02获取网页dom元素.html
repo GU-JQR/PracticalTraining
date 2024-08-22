@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- 空白节点  node-->
     <!-- 文本节点 -->
@@ -30,35 +32,37 @@
     //document对象：保存html页面的所有元素的信息
 
     //如何根据document对象来找到里面的id="haha"的元素
-   
-    console.log( window.document);
+
+    console.log(window.document);
 
     //1.根据元素的id找到那个元素对象
-    let divHaHa =  document.getElementById("haha");
+    let divHaHa = document.getElementById("haha");
     console.log(divHaHa);
     //改变里面的文本内容
     divHaHa.innerHTML = "北大青鸟";
 
     //2.根据name属性获取一组元素
     let sportsObj = document.getElementsByName("sports");
+    console.log("+++++++++++++++++++++++++");
     console.log(sportsObj);
-    for(let i = 0;i<sportsObj.length;i++){
+    for (let i = 0; i < sportsObj.length; i++) {
         console.log(sportsObj[i].value);
         //勾选value值是橄榄球的运动
-        if(sportsObj[i].value ==="橄榄球"){
+        if (sportsObj[i].value === "橄榄球") {
             sportsObj[i].checked = true;
         }
     }
 
 
     //3.根据标签名获取相关元素
-    let pObjs =  document.getElementsByTagName("p");
+    let pObjs = document.getElementsByTagName("p");
     console.log(pObjs);
-    for(let i = 0;i<pObjs.length;i++){
+    for (let i = 0; i < pObjs.length; i++) {
         console.log(pObjs[i].innerHTML);//获取文本内容
     }
 
-    
+
 
 </script>
+
 </html>

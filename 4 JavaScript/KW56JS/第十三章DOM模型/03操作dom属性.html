@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p>选择你喜欢的书: <input onclick="changePic('dog')" type="radio" name="book" >狗狗
-      <input type="radio" name="book" onclick="changePic('mai')">灰霾来了
+    <p>选择你喜欢的书: 
+        <input onclick="changePic('dog')" type="radio" name="book">狗狗
+        <input type="radio" name="book" onclick="changePic('mai')">灰霾来了
     </p>
     <div>
         <img src="img/dog.jpg" alt="">
     </div>
 
     <div>爱好: <input type="checkbox" name="ai" value="吹牛" onclick="selInput(this)">吹牛
-        <input type="checkbox" name="ai" value="睡觉"  onclick="selInput(this)">睡觉
-        <input type="checkbox" name="ai" value="吃肯德基"  onclick="selInput(this)">吃肯德基
-        <input type="checkbox" name="ai" value="打游戏"  onclick="selInput(this)">打游戏
+        <input type="checkbox" name="ai" value="睡觉" onclick="selInput(this)">睡觉
+        <input type="checkbox" name="ai" value="吃肯德基" onclick="selInput(this)">吃肯德基
+        <input type="checkbox" name="ai" value="打游戏" onclick="selInput(this)">打游戏
         <button onclick="getHobbies()">获取爱好</button>
     </div>
-    
+
 </body>
 
 <script>
     //给input添加点击事件，当你点击的时候添加属性checked
-    function selInput(obj){
+    function selInput(obj) {
         // console.log(obj);
         // console.log(obj.getAttribute("checked"));
         //如果复选框checked属性是null,添加一个，如果checked属性存在，改成null(交替执行)
-        if(obj.getAttribute("checked")===null){
-            obj.setAttribute("checked","checked");
-        }else{
+        if (obj.getAttribute("checked") === null) {
+            obj.setAttribute("checked", "checked");
+        } else {
             //去掉checked属性
             // obj.setAttribute("checked",null);
             obj.removeAttribute("checked");
         }
-        
+
     }
     //获取选中的爱好
-    function getHobbies(){
+    function getHobbies() {
         //1.选中所有的复选框对象
-        let inputs =  document.querySelectorAll("[type='checkbox']");
+        let inputs = document.querySelectorAll("[type='checkbox']");
         //2.遍历inputs,判断哪些是checked，如果checked，打印里面value值
-        for(let i = 0;i<inputs.length;i++){
+        for (let i = 0; i < inputs.length; i++) {
 
             // console.log(inputs[i]);
-            if(inputs[i].getAttribute("checked")){
+            if (inputs[i].getAttribute("checked")) {
                 console.log(inputs[i].value);
             }
         }
@@ -67,20 +70,20 @@
     // console.log(inputs[0].value);
     // console.log(inputs[0].getAttribute("value"));
     //如何获取选中的爱好?判断input是否是checked
-    
 
 
 
 
-    function changePic(type){
+
+    function changePic(type) {
         // alert(type);
-         //1.找到被修改的img对象
-        let imgObj =  document.querySelector("img");
+        //1.找到被修改的img对象
+        let imgObj = document.querySelector("img");
         //2.根据修改type,判定是改成狗狗图片还是雾霾图片
-        if(type==="dog"){
-            imgObj.setAttribute("src","img/dog.jpg");
-        }else{
-            imgObj.setAttribute("src","img/mai.jpg");
+        if (type === "dog") {
+            imgObj.setAttribute("src", "img/dog.jpg");
+        } else {
+            imgObj.setAttribute("src", "img/mai.jpg");
         }
     }
 
@@ -100,4 +103,5 @@
     //     imgObj.setAttribute("src","img/mai.jpg");
     // }
 </script>
+
 </html>

@@ -10,19 +10,68 @@
 
 <body>
     <div id="app">
+        <input type="text" v-model="username">
+        <input type="text" v-model="password">
+        <br>
         {{mes}}
         <br>
         {{user}}
         <br>
         {{user.age}}
+        <br>
+        <button @click="change()">{{big}}</button>
+        <br>
+        <img :src="imgUrl" alt="" :width="width">
+        <br>
+        <button @click="hello()">点击</button>
+        <br>
+        <p>单价:{{price}}</p>
+        <button @click="sub">-</button>
+        <span>{{num}}</span>
+        <button @click="add">+</button>
+        <p>总价:{{total}}</p>
     </div>
 
     <script>
         let vue = new Vue({
             el: '#app',
             data: {
+                width: '300px',
+                imgUrl: '../imgs/food.jpg',
                 mes: 'hello vue',
-                user: { name: '小美', age: 22 }
+                user: { name: '小美', age: 22 },
+                user: '',
+                password: '',
+                big: '大大大',
+                price: 5,
+                num: 0,
+                sum: 0,
+            },
+            methods: {
+                hello() {
+                    alert("hell Vue")
+                },
+                change() {
+                    if (this.width == '300px') {
+                        this.width = '600px'
+                        this.big = '小小小'
+                    } else {
+                        this.width = '300px'
+                        this.big = '大大大'
+                    }
+                },
+                sub() {
+                    if (this.num > 0)
+                        this.num--;
+                },
+                add() {
+                    this.num++;
+                }
+            },
+            computed: {
+                total() {
+                    return this.price * this.num;
+                }
             }
         })
     </script>

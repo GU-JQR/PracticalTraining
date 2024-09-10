@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        #outer {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        #inner {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        {{mes}}
+        <div v-text="mes">今天是个好日子</div>
+        <div v-html="mes">今天是个好日子</div>
+
+        用户名: <input type="text" v-model="user.username">
+        姓名: <input type="text" v-model="user.sex">
+
+        <div>
+            <button @click="changeStatus()">切换标签</button>
+            <p v-if="flag">你看到我了</p>
+            <p v-else>我躲起来了</p>
+            <p v-show="flag">你看到我了!</p>
+            <p v-show="!flag">我躲起来了</p>
+        </div>
+        <div>
+            <h2>列表渲染</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>年龄</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(u,index) in users" :key="index">
+                        <td>{{u.id}}</td>
+                        <td>{{u.name}}</td>
+                        <td>{{u.age}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="outer" @click="outer()">
+            <div id="inner" @click.stop="inner()"></div>
+        </div>
+        <div>
+            <a href="www.baidu.com" @click.prevent="hello()"></a>
+        </div>
+        <div>
+            <h3>添加用户信息</h3>
+            姓名: <input type="text" v-model="user.name"><br>
+            性别: <input type="radio" name="sex" value="1" v-model="user.sex">男
+            <input type="radio" name="sex" value="2" v-model="user.sex">女
+            <br>
+            兴趣:
+            <input type="checkbox" name="hobby" value="java" v-model="user.hobby">java
+            <input type="checkbox" name="hobby" value="game" v-model="user.hobby">game
+            <input type="checkbox" name="hobby" value="c" v-model="user.hobby">c
+            <input type="checkbox" name="hobby" value="vue" v-model="user.hobby">vue
+            <br>
+            班级:
+            <select v-model="user.classNo">
+                <option value="0">请选择</option>
+                <option :value="c.classNo" v-for="(c,index) in classes" :key="index">{{c.className}}</option>
+            </select>
+            <br>
+            介绍:
+            <textarea name="" v-model="user.myInfo" id=""></textarea>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                flag: true,
+                mes: 'hello-vue',
+                user: {
+                    username: '',
+                    name: '',
+                    hobby: [],
+                    classNo: 0,
+                    myInfo: '',
+                    sex: 0,
+                },
+                users: [
+                    { "id": 1001, "name": '小美', 'age': 22 },
+                    { "id": 1002, "name": '小丽', 'age': 22 },
+                    { "id": 1003, "name": '詹姆斯', 'age': 22 },
+                    { "id": 1004, "name": '球球', 'age': 22 },
+                ],
+                classes: [
+                    { classNo: 1, className: '一(1)' },
+                    { classNo: 2, className: '一(2)' },
+                    { classNo: 3, className: '一(3)' },
+                    { classNo: 4, className: '一(4)' },
+                    { classNo: 5, className: '一(5)' },
+                ]
+            },
+            methods: {
+                changeStatus() {
+                    this.flag = !this.flag
+                },
+                outer() {
+                    alert("out");
+                },
+                inner() {
+                    alert("in");
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
